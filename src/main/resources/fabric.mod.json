@@ -1,0 +1,36 @@
+{
+  "schemaVersion": 1,
+  "id": "adapaxels",
+  "version": "${version}",
+   
+  "name": "AdaPaxels",
+  "description": "A mod that adds a multitool",
+  "authors": [
+    "Brandcraft06"
+  ],
+  "contact": {
+    "homepage": "https://www.curseforge.com/minecraft/mc-mods/adapaxels",
+    "sources": "https://github.com/Brandcraf06/AdaPaxels",
+	"issues": "https://github.com/Brandcraf06/AdaPaxels/issues"
+  },
+
+  "license": "GPLv3",
+  "icon": "assets/adapaxels/icon.png",
+
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "com.brand.adapaxels.AdaPaxels"
+	]
+  },
+  "mixins": [
+      "adapaxels.mixins.json"
+  ],
+   "depends": {
+    "fabricloader": ">=0.8.8",
+    "fabric": "*",
+	"minecraft": "1.16.x"
+  },
+  "suggests": {
+  }
+}

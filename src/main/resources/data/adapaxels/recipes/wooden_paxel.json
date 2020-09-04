@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "ABC"
+  ],
+  "key": {
+    "A": {
+      "item": "minecraft:wooden_axe"
+    },
+    "B": {
+      "item": "minecraft:wooden_pickaxe"
+    },
+	"C": {
+      "item": "minecraft:wooden_shovel"
+    }
+  },
+  "result": {
+    "item": "adapaxels:wooden_paxel"
+  }
+}

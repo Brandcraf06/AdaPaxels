@@ -1,0 +1,13 @@
+{
+    "required": true,
+    "package": "com.brand.adapaxels.mixin",
+    "compatibilityLevel": "JAVA_8",
+    "minVersion": "0.7.11-SNAPSHOT",
+    "mixins": [
+		"AxeItemAccessor",
+		"ShovelItemAccessor"
+    ],
+    "injectors": {
+        "defaultRequire": 1
+    }
+}
