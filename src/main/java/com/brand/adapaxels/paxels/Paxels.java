@@ -23,9 +23,9 @@ public class Paxels {
     
     public static void init() {
         if(FabricLoader.getInstance().isModLoaded("adabraniummod")) {
-        	VIBRANIUM = register(PaxelsMaterials.VIBRANIUM, 5, -2.3f, "vibranium", (new Item.Settings()).group(AdaPaxels.ADAPAXELS_GROUP));
-        	ADAMANTIUM = register(PaxelsMaterials.ADAMANTIUM, 10, -2.9f, "adamantium", (new Item.Settings()).group(AdaPaxels.ADAPAXELS_GROUP));
-        	NETHER_BRICK = register(PaxelsMaterials.NETHER_BRICK, 10, -2.9f, "nether", (new Item.Settings()).group(AdaPaxels.ADAPAXELS_GROUP).fireproof());
+        	VIBRANIUM = register(PaxelsMaterials.VIBRANIUM, 1, -2.8f, "vibranium", (new Item.Settings()).group(AdaPaxels.ADAPAXELS_GROUP));
+        	ADAMANTIUM = register(PaxelsMaterials.ADAMANTIUM, 1, -2.8f, "adamantium", (new Item.Settings()).group(AdaPaxels.ADAPAXELS_GROUP));
+        	NETHER_BRICK = register(PaxelsMaterials.NETHER_BRICK, 1, -2.8f, "nether", (new Item.Settings()).group(AdaPaxels.ADAPAXELS_GROUP).fireproof());
             }
         }
 
