@@ -19,6 +19,7 @@ public class AdaPaxels implements ModInitializer {
 	@Override
 	public void onInitialize() {
 		new Paxels();
+		Paxels.init();
 		
 	}
 

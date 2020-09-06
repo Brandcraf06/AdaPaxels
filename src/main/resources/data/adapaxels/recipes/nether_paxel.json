@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "ABC"
+  ],
+  "key": {
+    "A": {
+      "item": "adabraniummod:nether_axe"
+    },
+    "B": {
+      "item": "adabraniummod:nether_pickaxe"
+    },
+	"C": {
+      "item": "adabraniummod:nether_shovel"
+    }
+  },
+  "result": {
+    "item": "adapaxels:nether_paxel"
+  },
+	"when": {
+		"libcd:mod_loaded": "adabraniummod"
+  }
+}

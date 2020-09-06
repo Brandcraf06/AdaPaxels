@@ -1,0 +1,9 @@
+{
+    "parent": "item/handheld",
+    "textures": {
+        "layer0": "adapaxels:item/nether_paxel"
+    },
+	"when": {
+		"libcd:mod_loaded": "adabraniummod"
+	}
+}

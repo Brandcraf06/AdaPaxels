@@ -6,7 +6,9 @@ import net.minecraft.item.Items;
 import net.minecraft.item.ToolMaterial;
 import net.minecraft.recipe.Ingredient;
 import net.minecraft.tag.ItemTags;
+import net.minecraft.util.Identifier;
 import net.minecraft.util.Lazy;
+import net.minecraft.util.registry.Registry;
 
 public enum PaxelsMaterials implements ToolMaterial {
    WOOD(0, 177, 2.0F, 0.0F, 15, () -> {
@@ -26,6 +28,15 @@ public enum PaxelsMaterials implements ToolMaterial {
    }),
    NETHERITE(4, 6093, 9.0F, 4.0F, 15, () -> {
       return Ingredient.ofItems(Items.NETHERITE_INGOT);
+   }),
+   VIBRANIUM(4, 8970, 20.0F, 10.0F, 12, () -> {
+	   return Ingredient.ofItems(Registry.ITEM.get(new Identifier("adabraniummod","vibranium_ingot")));
+   }),
+   ADAMANTIUM(4, 12840, 35.0F, 16.0F, 10, () -> {
+	      return Ingredient.ofItems(Registry.ITEM.get(new Identifier("adabraniummod","adamantium_ingot")));
+   }),
+   NETHER_BRICK(2, 1143, 8.0F, 2.0F, 15, () -> {
+	      return Ingredient.ofItems(Items.NETHER_BRICK);
    });
 
    private final int miningLevel;

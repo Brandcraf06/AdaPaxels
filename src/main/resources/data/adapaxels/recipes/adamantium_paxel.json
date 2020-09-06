@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "ABC"
+  ],
+  "key": {
+    "A": {
+      "item": "adabraniummod:adamantium_axe"
+    },
+    "B": {
+      "item": "adabraniummod:adamantium_pickaxe"
+    },
+	"C": {
+      "item": "adabraniummod:adamantium_shovel"
+    }
+  },
+  "result": {
+    "item": "adapaxels:adamantium_paxel"
+  },
+	"when": {
+		"libcd:mod_loaded": "adabraniummod"
+  }
+}
