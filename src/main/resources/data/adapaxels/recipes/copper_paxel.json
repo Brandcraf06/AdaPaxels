@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "ABC"
+  ],
+  "key": {
+    "A": {
+      "item": "astromine:copper_axe"
+    },
+    "B": {
+      "item": "astromine:copper_pickaxe"
+    },
+	"C": {
+      "item": "astromine:copper_shovel"
+    }
+  },
+  "result": {
+    "item": "adapaxels:copper_paxel"
+  },
+	"when": {
+		"libcd:mod_loaded": "astromine"
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "ABC"
+  ],
+  "key": {
+    "A": {
+      "item": "astromine:bronze_axe"
+    },
+    "B": {
+      "item": "astromine:bronze_pickaxe"
+    },
+	"C": {
+      "item": "astromine:bronze_shovel"
+    }
+  },
+  "result": {
+    "item": "adapaxels:bronze_paxel"
+  },
+	"when": {
+		"libcd:mod_loaded": "astromine"
+  }
+}

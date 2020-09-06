@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "ABC"
+  ],
+  "key": {
+    "A": {
+      "item": "astromine:sterling_silver_axe"
+    },
+    "B": {
+      "item": "astromine:sterling_silver_pickaxe"
+    },
+	"C": {
+      "item": "astromine:sterling_silver_shovel"
+    }
+  },
+  "result": {
+    "item": "adapaxels:sterling_silver_paxel"
+  },
+	"when": {
+		"libcd:mod_loaded": "astromine"
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "ABC"
+  ],
+  "key": {
+    "A": {
+      "item": "astromine:asterite_axe"
+    },
+    "B": {
+      "item": "astromine:asterite_pickaxe"
+    },
+	"C": {
+      "item": "astromine:asterite_shovel"
+    }
+  },
+  "result": {
+    "item": "adapaxels:asterite_paxel"
+  },
+	"when": {
+		"libcd:mod_loaded": "astromine"
+  }
+}

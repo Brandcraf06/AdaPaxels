@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "ABC"
+  ],
+  "key": {
+    "A": {
+      "item": "astromine:galaxium_axe"
+    },
+    "B": {
+      "item": "astromine:galaxium_pickaxe"
+    },
+	"C": {
+      "item": "astromine:galaxium_shovel"
+    }
+  },
+  "result": {
+    "item": "adapaxels:galaxium_paxel"
+  },
+	"when": {
+		"libcd:mod_loaded": "astromine"
+  }
+}

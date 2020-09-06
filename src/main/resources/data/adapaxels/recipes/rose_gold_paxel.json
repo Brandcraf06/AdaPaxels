@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "ABC"
+  ],
+  "key": {
+    "A": {
+      "item": "astromine:rose_gold_axe"
+    },
+    "B": {
+      "item": "astromine:rose_gold_pickaxe"
+    },
+	"C": {
+      "item": "astromine:rose_gold_shovel"
+    }
+  },
+  "result": {
+    "item": "adapaxels:rose_gold_paxel"
+  },
+	"when": {
+		"libcd:mod_loaded": "astromine"
+  }
+}

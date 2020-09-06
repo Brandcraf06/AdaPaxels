@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "ABC"
+  ],
+  "key": {
+    "A": {
+      "item": "astromine:electrum_axe"
+    },
+    "B": {
+      "item": "astromine:electrum_pickaxe"
+    },
+	"C": {
+      "item": "astromine:electrum_shovel"
+    }
+  },
+  "result": {
+    "item": "adapaxels:electrum_paxel"
+  },
+	"when": {
+		"libcd:mod_loaded": "astromine"
+  }
+}

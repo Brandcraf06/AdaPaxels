@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "ABC"
+  ],
+  "key": {
+    "A": {
+      "item": "astromine:tin_axe"
+    },
+    "B": {
+      "item": "astromine:tin_pickaxe"
+    },
+	"C": {
+      "item": "astromine:tin_shovel"
+    }
+  },
+  "result": {
+    "item": "adapaxels:tin_paxel"
+  },
+	"when": {
+		"libcd:mod_loaded": "astromine"
+  }
+}

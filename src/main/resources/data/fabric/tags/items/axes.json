@@ -8,6 +8,20 @@
 	"adapaxels:diamond_paxel",
 	"adapaxels:netherite_paxel",
 	"adapaxels:vibranium_paxel",
-	"adapaxels:adamantium_paxel"
+	"adapaxels:adamantium_paxel",
+	"adapaxels:copper_paxel",
+	"adapaxels:tin_paxel",
+	"adapaxels:silver_paxel",
+	"adapaxels:lead_paxel",
+	"adapaxels:bronze_paxel",
+	"adapaxels:electrum_paxel",
+	"adapaxels:rose_gold_paxel",
+	"adapaxels:sterling_silver_paxel",
+	"adapaxels:fools_gold_paxel",
+	"adapaxels:metite_paxel",
+	"adapaxels:asterite_paxel",
+	"adapaxels:stellum_paxel",
+	"adapaxels:galaxium_paxel",
+	"adapaxels:univite_paxel"
   ]
 }

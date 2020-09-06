@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "ABC"
+  ],
+  "key": {
+    "A": {
+      "item": "astromine:lead_axe"
+    },
+    "B": {
+      "item": "astromine:lead_pickaxe"
+    },
+	"C": {
+      "item": "astromine:lead_shovel"
+    }
+  },
+  "result": {
+    "item": "adapaxels:lead_paxel"
+  },
+	"when": {
+		"libcd:mod_loaded": "astromine"
+  }
+}

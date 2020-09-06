@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "ABC"
+  ],
+  "key": {
+    "A": {
+      "item": "astromine:univite_axe"
+    },
+    "B": {
+      "item": "astromine:univite_pickaxe"
+    },
+	"C": {
+      "item": "astromine:univite_shovel"
+    }
+  },
+  "result": {
+    "item": "adapaxels:univite_paxel"
+  },
+	"when": {
+		"libcd:mod_loaded": "astromine"
+  }
+}
