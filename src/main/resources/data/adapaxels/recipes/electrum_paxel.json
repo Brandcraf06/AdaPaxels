@@ -1,7 +1,9 @@
 {
   "type": "minecraft:crafting_shaped",
   "pattern": [
-    "ABC"
+    "ABC",
+    " S ",
+    " S "
   ],
   "key": {
     "A": {
@@ -12,12 +14,12 @@
     },
 	"C": {
       "item": "astromine:electrum_shovel"
+    },
+	"S": {
+      "item": "minecraft:stick"
     }
   },
   "result": {
     "item": "adapaxels:electrum_paxel"
-  },
-	"when": {
-		"libcd:mod_loaded": "astromine"
   }
 }

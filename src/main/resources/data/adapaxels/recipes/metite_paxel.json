@@ -1,7 +1,9 @@
 {
   "type": "minecraft:crafting_shaped",
   "pattern": [
-    "ABC"
+    "ABC",
+    " S ",
+    " S "
   ],
   "key": {
     "A": {
@@ -12,12 +14,12 @@
     },
 	"C": {
       "item": "astromine:metite_shovel"
+    },
+	"S": {
+      "item": "minecraft:stick"
     }
   },
   "result": {
     "item": "adapaxels:metite_paxel"
-  },
-	"when": {
-		"libcd:mod_loaded": "astromine"
   }
 }

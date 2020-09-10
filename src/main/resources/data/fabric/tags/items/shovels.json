@@ -7,21 +7,73 @@
 	"adapaxels:golden_paxel",
 	"adapaxels:diamond_paxel",
 	"adapaxels:netherite_paxel",
-	"adapaxels:vibranium_paxel",
-	"adapaxels:adamantium_paxel",
-	"adapaxels:copper_paxel",
-	"adapaxels:tin_paxel",
-	"adapaxels:silver_paxel",
-	"adapaxels:lead_paxel",
-	"adapaxels:bronze_paxel",
-	"adapaxels:electrum_paxel",
-	"adapaxels:rose_gold_paxel",
-	"adapaxels:sterling_silver_paxel",
-	"adapaxels:fools_gold_paxel",
-	"adapaxels:metite_paxel",
-	"adapaxels:asterite_paxel",
-	"adapaxels:stellum_paxel",
-	"adapaxels:galaxium_paxel",
-	"adapaxels:univite_paxel"
+	{
+		"id": "adapaxels:vibranium_paxel",
+		"required": false
+	},
+	{
+		"id": "adapaxels:adamantium_paxel",
+		"required": false
+	},
+	{
+		"id": "adapaxels:nether_paxel",
+		"required": false
+	},
+	{
+		"id": "adapaxels:copper_paxel",
+		"required": false
+	},
+	{
+		"id": "adapaxels:tin_paxel",
+		"required": false
+	},
+	{
+		"id": "adapaxels:silver_paxel",
+		"required": false
+	},
+	{
+		"id": "adapaxels:lead_paxel",
+		"required": false
+	},
+	{
+		"id": "adapaxels:bronze_paxel",
+		"required": false
+	},
+	{
+		"id": "adapaxels:electrum_paxel",
+		"required": false
+	},
+	{
+		"id": "adapaxels:rose_gold_paxel",
+		"required": false
+	},
+	{
+		"id": "adapaxels:sterling_silver_paxel",
+		"required": false
+	},
+	{
+		"id": "adapaxels:fools_gold_paxel",
+		"required": false
+	},
+	{
+		"id": "adapaxels:metite_paxel",
+		"required": false
+	},
+	{
+		"id": "adapaxels:asterite_paxel",
+		"required": false
+	},
+	{
+		"id": "adapaxels:stellum_paxel",
+		"required": false
+	},
+	{
+		"id": "adapaxels:galaxium_paxel",
+		"required": false
+	},
+	{
+		"id": "adapaxels:univite_paxel",
+		"required": false
+	}
   ]
 }

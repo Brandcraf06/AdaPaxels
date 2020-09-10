@@ -2,7 +2,9 @@
   "type": "minecraft:crafting_shaped",
   "group": "nether_paxel",
   "pattern": [
-    "ABC"
+    "ABC",
+    " S ",
+    " S "
   ],
   "key": {
     "A": {
@@ -13,12 +15,12 @@
     },
 	"C": {
       "item": "adabraniummod:nether_shovel"
+    },
+	"S": {
+      "item": "minecraft:stick"
     }
   },
   "result": {
     "item": "adapaxels:nether_paxel"
-  },
-	"when": {
-		"libcd:mod_loaded": "adabraniummod"
   }
 }

@@ -1,0 +1,14 @@
+{
+	"replace": false,
+	"values": [
+		"adapaxels:golden_paxel",
+		{
+            "id": "adapaxels:rose_gold_paxel",
+            "required": false
+        },
+		{
+            "id": "adapaxels:fools_gold_paxel",
+            "required": false
+        }
+	]
+}

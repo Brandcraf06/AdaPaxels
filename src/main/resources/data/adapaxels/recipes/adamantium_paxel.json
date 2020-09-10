@@ -1,7 +1,9 @@
 {
   "type": "minecraft:crafting_shaped",
   "pattern": [
-    "ABC"
+    "ABC",
+    " S ",
+    " S "
   ],
   "key": {
     "A": {
@@ -12,12 +14,12 @@
     },
 	"C": {
       "item": "adabraniummod:adamantium_shovel"
+    },
+	"S": {
+      "item": "adabraniummod:adamantium_rod"
     }
   },
   "result": {
     "item": "adapaxels:adamantium_paxel"
-  },
-	"when": {
-		"libcd:mod_loaded": "adabraniummod"
   }
 }

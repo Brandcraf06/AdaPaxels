@@ -1,7 +1,9 @@
 {
   "type": "minecraft:crafting_shaped",
   "pattern": [
-    "ABC"
+    "ABC",
+    " S ",
+    " S "
   ],
   "key": {
     "A": {
@@ -12,6 +14,9 @@
     },
 	"C": {
       "item": "minecraft:diamond_shovel"
+    },
+	"S": {
+      "item": "minecraft:stick"
     }
   },
   "result": {
