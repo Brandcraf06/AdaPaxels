@@ -31,7 +31,7 @@ public enum PaxelsMaterials implements ToolMaterial {
 	   return Ingredient.ofItems(Items.NETHERITE_INGOT);
    }),
    
-   // Adabranium	
+// Adabranium	
    VIBRANIUM(4, 8970, 20.0F, 10.0F, 12, () -> {
 	   return Ingredient.ofItems(Registry.ITEM.get(new Identifier("adabraniummod","vibranium_ingot")));
    }),
@@ -42,7 +42,7 @@ public enum PaxelsMaterials implements ToolMaterial {
 	   return Ingredient.ofItems(Items.NETHER_BRICK);
    }),
    
-   // Astromine
+// Astromine
    COPPER(1, 600, 4f, 1.5f, 10, () -> {
 	   return Ingredient.fromTag(TagRegistry.item(Identifier.tryParse("c:copper_ingots")));
    }),
@@ -88,6 +88,28 @@ public enum PaxelsMaterials implements ToolMaterial {
    }),
    UNIVITE(7, 11754, 12f, 6.0f, 22, () -> {
 	   return  Ingredient.fromTag(TagRegistry.item(Identifier.tryParse("c:univite_ingots")));
+   }),
+   LUNUM(4, 4146, 7f, 4.5f, 18, () -> {
+	   return  Ingredient.fromTag(TagRegistry.item(Identifier.tryParse("c:lunum_ingots")));
+   }),
+   
+// Tech Reborn	
+   TR_BRONZE(2, 1125, 7.0F, 2.25f, 12, () -> {
+	   return Ingredient.ofItems(Registry.ITEM.get(new Identifier("techreborn","bronze_ingot")));
+   }),
+   RUBY(2, 4953, 6.0F, 4.7F, 10, () -> {
+	   return Ingredient.ofItems(Registry.ITEM.get(new Identifier("techreborn","ruby_gem")));
+   }),
+   SAPPHIRE(3, 4953, 14.0F, 1.8F, 8, () -> {
+	   return Ingredient.ofItems(Registry.ITEM.get(new Identifier("techreborn","sapphire_gem")));
+   }),	
+   PERIDOT(2, 1719, 7.0F, 2.4F, 24, () -> {
+	   return Ingredient.ofItems(Registry.ITEM.get(new Identifier("techreborn","peridot_gem")));
+   }),
+   
+// Enderite Mod
+   ENDERITE(4, 12288, 15.0F, 2.0F, 17, () -> {
+   return Ingredient.ofItems(Registry.ITEM.get(new Identifier("enderitemod","enderite_ingot")));
    });
 
    private final int miningLevel;

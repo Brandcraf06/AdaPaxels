@@ -20,12 +20,12 @@ public class Paxels {
     public static Item VIBRANIUM;
     public static Item ADAMANTIUM;
     public static Item NETHER_BRICK;
-    public static Item UNIVITE;
     public static Item COPPER;
     public static Item SILVER;
     public static Item TIN;
 	public static Item LEAD;
 	public static Item BRONZE;
+	public static Item STEEL;
 	public static Item ELECTRUM;
 	public static Item ROSE_GOLD;
 	public static Item STERLING_SILVER;
@@ -34,6 +34,13 @@ public class Paxels {
 	public static Item ASTERITE;
 	public static Item STELLUM;
 	public static Item GALAXIUM;
+    public static Item UNIVITE;
+    public static Item LUNUM;
+    public static Item TR_BRONZE;
+    public static Item RUBY;
+    public static Item SAPPHIRE;
+    public static Item PERIDOT;
+    public static Item ENDERITE;
     
     public static void init() {
     	
@@ -51,6 +58,7 @@ public class Paxels {
     		SILVER = register(PaxelsMaterials.SILVER, 1, -2.8f, "silver", (new Item.Settings()).group(AdaPaxels.ADAPAXELS_GROUP));
     		LEAD = register(PaxelsMaterials.LEAD, 1, -2.8f, "lead", (new Item.Settings()).group(AdaPaxels.ADAPAXELS_GROUP));
     		BRONZE = register(PaxelsMaterials.BRONZE, 1, -2.8f, "bronze", (new Item.Settings()).group(AdaPaxels.ADAPAXELS_GROUP));
+    		STEEL = register(PaxelsMaterials.STEEL, 1, -2.8f, "steel", (new Item.Settings()).group(AdaPaxels.ADAPAXELS_GROUP));
     		ELECTRUM = register(PaxelsMaterials.ELECTRUM, 1, -2.8f, "electrum", (new Item.Settings()).group(AdaPaxels.ADAPAXELS_GROUP));
     		ROSE_GOLD = register(PaxelsMaterials.ROSE_GOLD, 1, -2.8f, "rose_gold", (new Item.Settings()).group(AdaPaxels.ADAPAXELS_GROUP));
     		STERLING_SILVER = register(PaxelsMaterials.STERLING_SILVER, 1, -2.8f, "sterling_silver", (new Item.Settings()).group(AdaPaxels.ADAPAXELS_GROUP));
@@ -60,8 +68,21 @@ public class Paxels {
     		STELLUM = register(PaxelsMaterials.STELLUM, 1, -2.8f, "stellum", (new Item.Settings()).group(AdaPaxels.ADAPAXELS_GROUP));
     		GALAXIUM = register(PaxelsMaterials.GALAXIUM, 1, -2.8f, "galaxium", (new Item.Settings()).group(AdaPaxels.ADAPAXELS_GROUP));
     		UNIVITE = register(PaxelsMaterials.UNIVITE, 1, -2.8f, "univite", (new Item.Settings()).group(AdaPaxels.ADAPAXELS_GROUP));
+    		LUNUM = register(PaxelsMaterials.LUNUM, 1, -2.8f, "lunum", (new Item.Settings()).group(AdaPaxels.ADAPAXELS_GROUP));
         	}
-    	}
+
+     // Tech Reborn
+    	if(FabricLoader.getInstance().isModLoaded("techreborn")) {
+    		TR_BRONZE = register(PaxelsMaterials.TR_BRONZE, 1, -2.8f, "tech_reborn_bronze", (new Item.Settings()).group(AdaPaxels.ADAPAXELS_GROUP));
+    		RUBY = register(PaxelsMaterials.RUBY, 1, -2.8f, "ruby", (new Item.Settings()).group(AdaPaxels.ADAPAXELS_GROUP));
+    		SAPPHIRE = register(PaxelsMaterials.SAPPHIRE, 1, -2.8f, "sapphire", (new Item.Settings()).group(AdaPaxels.ADAPAXELS_GROUP));
+    		PERIDOT = register(PaxelsMaterials.PERIDOT, 1, -2.8f, "peridot", (new Item.Settings()).group(AdaPaxels.ADAPAXELS_GROUP));
+        	}
+     // Enderite Mod
+   		if(FabricLoader.getInstance().isModLoaded("enderitemod")) {
+   			ENDERITE = register(PaxelsMaterials.ENDERITE, 4, -2.8f, "enderite", (new Item.Settings()).group(AdaPaxels.ADAPAXELS_GROUP).fireproof());
+       		}
+   		}
 
 
     private static Item register(ToolMaterial material, int attackDamage, float attackSpeed, String materialname, Item.Settings settings) {

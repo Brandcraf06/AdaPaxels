@@ -1,7 +1,7 @@
 {
     "parent": "item/handheld",
     "textures": {
-        "layer0": "adapaxels:item/univite_paxel"
+        "layer0": "adapaxels:item/enderite_paxel"
 
 	}
 }

@@ -40,6 +40,10 @@
 		"required": false
 	},
 	{
+		"id": "adapaxels:steel_paxel",
+		"required": false
+	},
+	{
 		"id": "adapaxels:electrum_paxel",
 		"required": false
 	},
@@ -73,6 +77,30 @@
 	},
 	{
 		"id": "adapaxels:univite_paxel",
+		"required": false
+	},
+	{
+		"id": "adapaxels:lunum_paxel",
+		"required": false
+	},
+	{
+		"id": "adapaxels:tech_reborn_bronze_paxel",
+		"required": false
+	},
+	{
+		"id": "adapaxels:ruby_paxel",
+		"required": false
+	},
+	{
+		"id": "adapaxels:sapphire_paxel",
+		"required": false
+	},
+	{
+		"id": "adapaxels:peridot_paxel",
+		"required": false
+	},
+	{
+		"id": "adapaxels:enderite_paxel",
 		"required": false
 	}
   ]

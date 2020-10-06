@@ -2,8 +2,6 @@
     "parent": "item/handheld",
     "textures": {
         "layer0": "adapaxels:item/stellum_paxel"
-    },
-	"when": {
-		"libcd:mod_loaded": "astromine"
+
 	}
 }

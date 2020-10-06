@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "ABC",
+    " S ",
+    " S "
+  ],
+  "key": {
+    "A": {
+      "item": "techreborn:peridot_axe"
+    },
+    "B": {
+      "item": "techreborn:peridot_pickaxe"
+    },
+	"C": {
+      "item": "techreborn:peridot_spade"
+    },
+	"S": {
+      "item": "minecraft:stick"
+    }
+  },
+  "result": {
+    "item": "adapaxels:peridot_paxel"
+  }
+}

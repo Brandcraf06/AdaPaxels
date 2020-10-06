@@ -17,6 +17,7 @@
 	"item.adapaxels.silver_paxel": "Silver Paxel",
 	"item.adapaxels.lead_paxel": "Lead Paxel",
 	"item.adapaxels.bronze_paxel": "Bronze Paxel",
+	"item.adapaxels.steel_paxel": "Steel Paxel",
 	"item.adapaxels.electrum_paxel": "Electrum Paxel",
 	"item.adapaxels.rose_gold_paxel": "Rose Gold Paxel",
 	"item.adapaxels.sterling_silver_paxel": "Sterling Silver Paxel",
@@ -25,5 +26,13 @@
 	"item.adapaxels.asterite_paxel": "Asterite Paxel",
 	"item.adapaxels.stellum_paxel": "Stellum Paxel",
 	"item.adapaxels.galaxium_paxel": "Galaxium Paxel",
-	"item.adapaxels.univite_paxel": "Univite Paxel"
+	"item.adapaxels.univite_paxel": "Univite Paxel",
+	"item.adapaxels.lunum_paxel": "Lunum Paxel",
+	
+	"item.adapaxels.tech_reborn_bronze_paxel": "Bronze Paxel",
+	"item.adapaxels.ruby_paxel": "Ruby Paxel",
+	"item.adapaxels.sapphire_paxel": "Sapphire Paxel",
+	"item.adapaxels.peridot_paxel": "Peridot Paxel",
+	
+	"item.adapaxels.enderite_paxel": "Enderite Paxel"
 }

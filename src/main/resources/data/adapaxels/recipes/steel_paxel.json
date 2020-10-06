@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "ABC",
+    " S ",
+    " S "
+  ],
+  "key": {
+    "A": {
+      "item": "astromine:steel_axe"
+    },
+    "B": {
+      "item": "astromine:steel_pickaxe"
+    },
+	"C": {
+      "item": "astromine:steel_shovel"
+    },
+	"S": {
+      "item": "minecraft:stick"
+    }
+  },
+  "result": {
+    "item": "adapaxels:steel_paxel"
+  }
+}

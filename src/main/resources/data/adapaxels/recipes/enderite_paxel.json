@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "ABC",
+    " S ",
+    " S "
+  ],
+  "key": {
+    "A": {
+      "item": "enderitemod:enderite_axe"
+    },
+    "B": {
+      "item": "enderitemod:enderite_pickaxe"
+    },
+	"C": {
+      "item": "enderitemod:enderite_shovel"
+    },
+	"S": {
+      "item": "minecraft:stick"
+    }
+  },
+  "result": {
+    "item": "adapaxels:enderite_paxel"
+  }
+}

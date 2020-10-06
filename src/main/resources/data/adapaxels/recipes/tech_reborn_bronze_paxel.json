@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "ABC",
+    " S ",
+    " S "
+  ],
+  "key": {
+    "A": {
+      "item": "techreborn:bronze_axe"
+    },
+    "B": {
+      "item": "techreborn:bronze_pickaxe"
+    },
+	"C": {
+      "item": "techreborn:bronze_spade"
+    },
+	"S": {
+      "item": "minecraft:stick"
+    }
+  },
+  "result": {
+    "item": "adapaxels:tech_reborn_bronze_paxel"
+  }
+}
