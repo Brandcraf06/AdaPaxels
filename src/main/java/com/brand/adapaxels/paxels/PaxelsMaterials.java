@@ -32,10 +32,10 @@ public enum PaxelsMaterials implements ToolMaterial {
    }),
    
 // Adabranium	
-   VIBRANIUM(4, 8970, 20.0F, 10.0F, 12, () -> {
+   VIBRANIUM(4, 8970, 20.0F, 8.0F, 12, () -> {
 	   return Ingredient.ofItems(Registry.ITEM.get(new Identifier("adabraniummod","vibranium_ingot")));
    }),
-   ADAMANTIUM(4, 12840, 35.0F, 16.0F, 10, () -> {
+   ADAMANTIUM(4, 12840, 35.0F, 14.0F, 10, () -> {
 	   return Ingredient.ofItems(Registry.ITEM.get(new Identifier("adabraniummod","adamantium_ingot")));
    }),
    NETHER_BRICK(2, 1143, 8.0F, 2.0F, 15, () -> {
@@ -91,6 +91,9 @@ public enum PaxelsMaterials implements ToolMaterial {
    }),
    LUNUM(4, 4146, 7f, 4.5f, 18, () -> {
 	   return  Ingredient.fromTag(TagRegistry.item(Identifier.tryParse("c:lunum_ingots")));
+   }),
+   METEORIC_STEEL(3, 2847, 10.5f, 3.5f, 10, () -> {
+	   return  Ingredient.fromTag(TagRegistry.item(Identifier.tryParse("c:meteoric_steel_ingots")));
    }),
    
 // Tech Reborn	

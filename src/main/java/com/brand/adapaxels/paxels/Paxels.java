@@ -36,6 +36,7 @@ public class Paxels {
 	public static Item GALAXIUM;
     public static Item UNIVITE;
     public static Item LUNUM;
+    public static Item METEORIC_STEEL;
     public static Item TR_BRONZE;
     public static Item RUBY;
     public static Item SAPPHIRE;
@@ -69,6 +70,7 @@ public class Paxels {
     		GALAXIUM = register(PaxelsMaterials.GALAXIUM, 1, -2.8f, "galaxium", (new Item.Settings()).group(AdaPaxels.ADAPAXELS_GROUP));
     		UNIVITE = register(PaxelsMaterials.UNIVITE, 1, -2.8f, "univite", (new Item.Settings()).group(AdaPaxels.ADAPAXELS_GROUP));
     		LUNUM = register(PaxelsMaterials.LUNUM, 1, -2.8f, "lunum", (new Item.Settings()).group(AdaPaxels.ADAPAXELS_GROUP));
+    		METEORIC_STEEL = register(PaxelsMaterials.METEORIC_STEEL, 1, -2.8f, "meteoric_steel", (new Item.Settings()).group(AdaPaxels.ADAPAXELS_GROUP));
         	}
 
      // Tech Reborn

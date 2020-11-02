@@ -84,6 +84,10 @@
 		"required": false
 	},
 	{
+		"id": "adapaxels:meteoric_steel_paxel",
+		"required": false
+	},
+	{
 		"id": "adapaxels:tech_reborn_bronze_paxel",
 		"required": false
 	},
