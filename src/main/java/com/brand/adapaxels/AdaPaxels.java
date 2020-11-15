@@ -11,16 +11,16 @@ import org.apache.logging.log4j.Logger;
 import com.brand.adapaxels.paxels.Paxels;
 
 public class AdaPaxels implements ModInitializer {
-	
+
 	public static final String MOD_ID = "adapaxels";
 	public static final Logger LOGGER = LogManager.getLogger();
 	public static final ItemGroup ADAPAXELS_GROUP = FabricItemGroupBuilder.build(new Identifier(MOD_ID, "adapaxels_group"), () -> new ItemStack(Paxels.NETHERITE));
-	
+
 	@Override
 	public void onInitialize() {
 		new Paxels();
 		Paxels.init();
-		
+
 	}
 
 	public static Identifier id(String name) {
