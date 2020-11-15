@@ -36,8 +36,8 @@ dependencies {
 	modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
 	
 	// libcd
-    modImplementation 'io.github.cottonmc:LibCD:3.0.2+1.16.2'
-    include 'io.github.cottonmc:LibCD:3.0.2+1.16.2'
+    modImplementation 'io.github.cottonmc:LibCD:3.0.3+1.16.3'
+    include 'io.github.cottonmc:LibCD:3.0.3+1.16.3'
 }
 
 processResources {
