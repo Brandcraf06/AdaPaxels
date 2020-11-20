@@ -10,8 +10,8 @@ import java.util.Map;
 
 @Mixin(ShovelItem.class)
 public interface ShovelItemAccessor {
-	@Accessor("PATH_STATES")
-	public static Map<Block, BlockState> getEffectiveBlocks() {
-		return null;
-	}
+    @Accessor("PATH_STATES")
+	static Map<Block, BlockState> getEffectiveBlocks() {
+        return null;
+    }
 }
