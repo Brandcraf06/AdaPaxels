@@ -113,6 +113,11 @@ public enum PaxelsMaterials implements ToolMaterial {
     // Enderite Mod
     ENDERITE(4, 4096, 15.0F, 2.0F, 17, () -> {
         return Ingredient.ofItems(Registry.ITEM.get(new Identifier("enderitemod", "enderite_ingot")));
+    }),
+
+    // Gilded Netherite
+    GILDED_NETHERITE(5, 6774, 11.0F, 4.5F, 21, () -> {
+        return Ingredient.ofItems(Registry.ITEM.get(new Identifier("gildednetherite", "gilded_ingot")));
     });
 
     private final int miningLevel;
