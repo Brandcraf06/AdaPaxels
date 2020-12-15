@@ -15,7 +15,6 @@ public class AdaPaxels implements ModInitializer {
     public static final Logger LOGGER = LogManager.getLogger();
     public static final ItemGroup ADAPAXELS_GROUP = FabricItemGroupBuilder.build(new Identifier(MOD_ID, "adapaxels_group"), () -> new ItemStack(Paxels.NETHERITE));
 
-
     @Override
     public void onInitialize() {
         new Paxels();
