@@ -6,6 +6,7 @@ import com.brand.adapaxels.paxels.base.PaxelBase;
 import net.fabricmc.loader.api.FabricLoader;
 import net.minecraft.item.Item;
 import net.minecraft.item.ToolMaterial;
+import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
 
 public class Paxels {
@@ -87,6 +88,10 @@ public class Paxels {
 
 
     private static Item register(ToolMaterial material, int attackDamage, float attackSpeed, String materialname, Item.Settings settings) {
-        return Registry.register(Registry.ITEM, AdaPaxels.id(materialname + "_paxel"), new PaxelBase(material, attackDamage, attackSpeed, settings));
+        return Registry.register(Registry.ITEM, id(materialname + "_paxel"), new PaxelBase(material, attackDamage, attackSpeed, settings));
+    }
+
+    public static Identifier id(String name) {
+        return new Identifier(AdaPaxels.MOD_ID, name);
     }
 }
