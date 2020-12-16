@@ -91,16 +91,16 @@ public class Paxels {
 
         // Gilded Netherite
         if (FabricLoader.getInstance().isModLoaded("gildednetherite")) {
-            GILDED_NETHERITE = registerGildedPaxel(PaxelsMaterials.GILDED_NETHERITE, 1, -2.8f, "gilded_netherite", (new Item.Settings().group(AdaPaxels.ADAPAXELS_GROUP).fireproof().rarity(Rarity.UNCOMMON)));
+            GILDED_NETHERITE = registerGildedPaxel(PaxelsMaterials.GILDED_NETHERITE, 1, -2.8f, "gilded", (new Item.Settings().group(AdaPaxels.ADAPAXELS_GROUP).fireproof().rarity(Rarity.UNCOMMON)));
             PaxelRecipes.addPaxelRecipe(DynamicWriter.createSmithingRecipeJson(
                     new Identifier(AdaPaxels.MOD_ID, "diamond_paxel"),
                     new Identifier("gildednetherite", "gilded_ingot"),
-                    new Identifier("gildednetherite", "gilded_netherite_paxel")), id("gilded_netherite_paxel1"));
+                    new Identifier("gildednetherite", "gilded_paxel")), id("gilded_paxel1"));
             PaxelRecipes.addPaxelRecipe(DynamicWriter.createSmithingRecipeJson(
                     new Identifier(AdaPaxels.MOD_ID, "netherite_paxel"),
                     new Identifier("gildednetherite", "diamond_scrap"),
-                    new Identifier("gildednetherite", "gilded_netherite_paxel")),
-                    id("gilded_netherite_paxel2"));
+                    new Identifier("gildednetherite", "gilded_paxel")),
+                    id("gilded_paxel2"));
         }
     }
 
