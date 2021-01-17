@@ -11,12 +11,12 @@ import java.util.Set;
 @Mixin(AxeItem.class)
 public interface AxeItemAccessor {
     @Accessor("STRIPPED_BLOCKS")
-	static Map<Block, Block> getStrippedBlocks() {
+    static Map<Block, Block> getStrippedBlocks() {
         return null;
     }
 
     @Accessor("EFFECTIVE_BLOCKS")
-	static Set<Block> getEffectiveBlocks() {
+    static Set<Block> getEffectiveBlocks() {
         return null;
     }
 }
