@@ -12,10 +12,10 @@
     "B": {
       "item": "enderitemod:enderite_pickaxe"
     },
-	"C": {
+    "C": {
       "item": "enderitemod:enderite_shovel"
     },
-	"S": {
+    "S": {
       "item": "minecraft:stick"
     }
   },

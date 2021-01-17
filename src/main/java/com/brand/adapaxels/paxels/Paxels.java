@@ -3,9 +3,12 @@ package com.brand.adapaxels.paxels;
 
 import com.brand.adapaxels.AdaPaxels;
 import com.brand.adapaxels.paxels.base.PaxelBase;
+import com.brand.adapaxels.utils.DynamicWriter;
 import net.fabricmc.loader.api.FabricLoader;
 import net.minecraft.item.Item;
 import net.minecraft.item.ToolMaterial;
+import net.minecraft.util.Identifier;
+import net.minecraft.util.Rarity;
 import net.minecraft.util.registry.Registry;
 
 public class Paxels {
@@ -41,6 +44,7 @@ public class Paxels {
     public static Item SAPPHIRE;
     public static Item PERIDOT;
     public static Item ENDERITE;
+    public static Item GILDED_NETHERITE;
 
     public static void init() {
 
@@ -79,14 +83,36 @@ public class Paxels {
             SAPPHIRE = register(PaxelsMaterials.SAPPHIRE, 1, -2.8f, "sapphire", (new Item.Settings()).group(AdaPaxels.ADAPAXELS_GROUP));
             PERIDOT = register(PaxelsMaterials.PERIDOT, 1, -2.8f, "peridot", (new Item.Settings()).group(AdaPaxels.ADAPAXELS_GROUP));
         }
+
         // Enderite Mod
         if (FabricLoader.getInstance().isModLoaded("enderitemod")) {
             ENDERITE = register(PaxelsMaterials.ENDERITE, 4, -2.8f, "enderite", (new Item.Settings()).group(AdaPaxels.ADAPAXELS_GROUP).fireproof());
         }
+
+        // Gilded Netherite
+        if (FabricLoader.getInstance().isModLoaded("gildednetherite")) {
+            GILDED_NETHERITE = registerGildedPaxel(PaxelsMaterials.GILDED_NETHERITE, 1, -2.8f, "gilded", (new Item.Settings().group(AdaPaxels.ADAPAXELS_GROUP).fireproof().rarity(Rarity.UNCOMMON)));
+            PaxelRecipes.addPaxelRecipe(DynamicWriter.createSmithingRecipeJson(
+                    new Identifier(AdaPaxels.MOD_ID, "diamond_paxel"),
+                    new Identifier("gildednetherite", "gilded_ingot"),
+                    new Identifier("gildednetherite", "gilded_paxel")), id("gilded_paxel1"));
+            PaxelRecipes.addPaxelRecipe(DynamicWriter.createSmithingRecipeJson(
+                    new Identifier(AdaPaxels.MOD_ID, "netherite_paxel"),
+                    new Identifier("gildednetherite", "diamond_scrap"),
+                    new Identifier("gildednetherite", "gilded_paxel")),
+                    id("gilded_paxel2"));
+        }
     }
 
-
     private static Item register(ToolMaterial material, int attackDamage, float attackSpeed, String materialname, Item.Settings settings) {
-        return Registry.register(Registry.ITEM, AdaPaxels.id(materialname + "_paxel"), new PaxelBase(material, attackDamage, attackSpeed, settings));
+        return Registry.register(Registry.ITEM, id(materialname + "_paxel"), new PaxelBase(material, attackDamage, attackSpeed, settings));
+    }
+
+    private static Item registerGildedPaxel(ToolMaterial material, int attackDamage, float attackSpeed, String materialname, Item.Settings settings) {
+        return Registry.register(Registry.ITEM, new Identifier("gildednetherite", materialname + "_paxel"), new PaxelBase(material, attackDamage, attackSpeed, settings));
+    }
+
+    public static Identifier id(String name) {
+        return new Identifier(AdaPaxels.MOD_ID, name);
     }
 }

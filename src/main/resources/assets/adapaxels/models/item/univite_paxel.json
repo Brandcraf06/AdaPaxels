@@ -1,7 +1,6 @@
 {
-    "parent": "item/handheld",
-    "textures": {
-        "layer0": "adapaxels:item/univite_paxel"
-
-	}
+  "parent": "item/handheld",
+  "textures": {
+    "layer0": "adapaxels:item/univite_paxel"
+  }
 }

@@ -9,8 +9,8 @@ import org.spongepowered.asm.mixin.gen.Accessor;
 
 @Mixin(PickaxeItem.class)
 public interface PickaxeItemAccessor {
-    @Accessor("field_27078")
-	static Object2IntMap<Block> getEffectiveBlocks() {
+    @Accessor("BLOCK_MINING_LEVELS")
+    static Object2IntMap<Block> getEffectiveBlocks() {
         return null;
     }
 }

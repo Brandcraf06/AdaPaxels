@@ -1,7 +1,6 @@
 {
-    "parent": "item/handheld",
-    "textures": {
-        "layer0": "adapaxels:item/asterite_paxel"
-
-	}
+  "parent": "item/handheld",
+  "textures": {
+    "layer0": "adapaxels:item/asterite_paxel"
+  }
 }

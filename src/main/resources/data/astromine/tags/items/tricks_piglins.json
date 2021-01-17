@@ -1,10 +1,9 @@
-
 {
-	"replace": false,
-	"values": [
-		{
-            "id": "adapaxels:fools_gold_paxel",
-            "required": false
-        }
-	]
+  "replace": false,
+  "values": [
+    {
+      "id": "adapaxels:fools_gold_paxel",
+      "required": false
+    }
+  ]
 }
