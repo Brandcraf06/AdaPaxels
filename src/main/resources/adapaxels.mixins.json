@@ -5,8 +5,10 @@
     "minVersion": "0.7.11-SNAPSHOT",
     "mixins": [
         "AxeItemAccessor",
-        "RecipeManagerMixin",
-        "ShovelItemAccessor"
+        "PickaxeItemAccessor",
+        "ShovelItemAccessor",
+        "HoeItemAccessor",
+        "RecipeManagerMixin"
     ],
     "injectors": {
         "defaultRequire": 1

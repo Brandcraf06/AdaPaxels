@@ -32,10 +32,10 @@ public enum PaxelsMaterials implements ToolMaterial {
     }),
 
     // Adabranium
-    VIBRANIUM(4, 2990, 17.0F, 8.0F, 12, () -> {
+    VIBRANIUM(4, 2990, 17.0F, 6.0F, 12, () -> {
         return Ingredient.ofItems(Registry.ITEM.get(new Identifier("adabraniummod", "vibranium_ingot")));
     }),
-    ADAMANTIUM(4, 4280, 25.0F, 13.0F, 10, () -> {
+    ADAMANTIUM(4, 4280, 25.0F, 9.0F, 10, () -> {
         return Ingredient.ofItems(Registry.ITEM.get(new Identifier("adabraniummod", "adamantium_ingot")));
     }),
     NETHER_BRICK(2, 381, 8.0F, 2.0F, 15, () -> {
@@ -109,6 +109,16 @@ public enum PaxelsMaterials implements ToolMaterial {
     PERIDOT(2, 750, 7.0F, 1.5F, 12, () -> {
         return Ingredient.ofItems(Registry.ITEM.get(new Identifier("techreborn", "peridot_gem")));
     }),
+
+    // Applied Energistics 2
+
+    CERTUS_QUARTZ(2, 250, 6.0F, 2.0F, 14, () -> {
+        return Ingredient.ofItems(Registry.ITEM.get(new Identifier("appliedenergistics2", "certus_quartz_crystal")));
+    }),
+    NETHER_QUARTZ(2, 250, 6.0F, 2.0F, 14, () -> {
+        return Ingredient.ofItems(Items.QUARTZ);
+    }),
+
 
     // Enderite Mod
     ENDERITE(4, 4096, 15.0F, 2.0F, 17, () -> {
