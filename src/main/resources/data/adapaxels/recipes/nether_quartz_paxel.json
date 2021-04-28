@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "ABC",
+    " S ",
+    " S "
+  ],
+  "key": {
+    "A": {
+      "item": "appliedenergistics2:nether_quartz_axe"
+    },
+    "B": {
+      "item": "appliedenergistics2:nether_quartz_pickaxe"
+    },
+	"C": {
+      "item": "appliedenergistics2:nether_quartz_shovel"
+    },
+	"S": {
+      "item": "minecraft:stick"
+    }
+  },
+  "result": {
+    "item": "adapaxels:nether_quartz_paxel"
+  }
+}

@@ -6,6 +6,7 @@ import com.brand.adapaxels.paxels.base.PaxelBase;
 import com.brand.adapaxels.utils.DynamicWriter;
 import net.fabricmc.loader.api.FabricLoader;
 import net.minecraft.item.Item;
+import net.minecraft.item.Items;
 import net.minecraft.item.ToolMaterial;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.Rarity;
@@ -39,6 +40,8 @@ public class Paxels {
     public static Item UNIVITE;
     public static Item LUNUM;
     public static Item METEORIC_STEEL;
+    public static Item CERTUS_QUARTZ;
+    public static Item NETHER_QUARTZ;
     public static Item TR_BRONZE;
     public static Item RUBY;
     public static Item SAPPHIRE;
@@ -74,6 +77,12 @@ public class Paxels {
             UNIVITE = register(PaxelsMaterials.UNIVITE, 1, -2.8f, "univite", (new Item.Settings()).group(AdaPaxels.ADAPAXELS_GROUP));
             LUNUM = register(PaxelsMaterials.LUNUM, 1, -2.8f, "lunum", (new Item.Settings()).group(AdaPaxels.ADAPAXELS_GROUP));
             METEORIC_STEEL = register(PaxelsMaterials.METEORIC_STEEL, 1, -2.8f, "meteoric_steel", (new Item.Settings()).group(AdaPaxels.ADAPAXELS_GROUP));
+        }
+
+        // Applied Energistics 2
+        if (FabricLoader.getInstance().isModLoaded("appliedenergistics2")) {
+            CERTUS_QUARTZ = register(PaxelsMaterials.CERTUS_QUARTZ, 1, -2.8f, "certus_quartz", (new Item.Settings()).group(AdaPaxels.ADAPAXELS_GROUP));
+            NETHER_QUARTZ = register(PaxelsMaterials.NETHER_QUARTZ, 1, -2.8f, "nether_quartz", (new Item.Settings()).group(AdaPaxels.ADAPAXELS_GROUP));
         }
 
         // Tech Reborn

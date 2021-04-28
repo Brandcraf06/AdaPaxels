@@ -1,0 +1,6 @@
+{
+    "parent": "item/handheld",
+    "textures": {
+        "layer0": "adapaxels:item/certus_quartz_paxel"
+	}
+}
