@@ -1,118 +1,127 @@
 {
   "replace": false,
   "values": [
-	"adapaxels:wooden_paxel",
-	"adapaxels:stone_paxel",
-	"adapaxels:iron_paxel",
-	"adapaxels:golden_paxel",
-	"adapaxels:diamond_paxel",
-	"adapaxels:netherite_paxel",
-	{
-		"id": "adapaxels:vibranium_paxel",
-		"required": false
-	},
-	{
-		"id": "adapaxels:adamantium_paxel",
-		"required": false
-	},
-	{
-		"id": "adapaxels:nether_paxel",
-		"required": false
-	},
-	{
-		"id": "adapaxels:copper_paxel",
-		"required": false
-	},
-	{
-		"id": "adapaxels:tin_paxel",
-		"required": false
-	},
-	{
-		"id": "adapaxels:silver_paxel",
-		"required": false
-	},
-	{
-		"id": "adapaxels:lead_paxel",
-		"required": false
-	},
-	{
-		"id": "adapaxels:bronze_paxel",
-		"required": false
-	},
-	{
-		"id": "adapaxels:steel_paxel",
-		"required": false
-	},
-	{
-		"id": "adapaxels:electrum_paxel",
-		"required": false
-	},
-	{
-		"id": "adapaxels:rose_gold_paxel",
-		"required": false
-	},
-	{
-		"id": "adapaxels:sterling_silver_paxel",
-		"required": false
-	},
-	{
-		"id": "adapaxels:fools_gold_paxel",
-		"required": false
-	},
-	{
-		"id": "adapaxels:metite_paxel",
-		"required": false
-	},
-	{
-		"id": "adapaxels:asterite_paxel",
-		"required": false
-	},
-	{
-		"id": "adapaxels:stellum_paxel",
-		"required": false
-	},
-	{
-		"id": "adapaxels:galaxium_paxel",
-		"required": false
-	},
-	{
-		"id": "adapaxels:univite_paxel",
-		"required": false
-	},
-	{
-		"id": "adapaxels:lunum_paxel",
-		"required": false
-	},
-	{
-		"id": "adapaxels:meteoric_steel_paxel",
-		"required": false
-	},
-	      "id": "adapaxels:certus_quartz_paxel",
-        "required": false
-    },
-    {
-        "id": "adapaxels:nether_quartz_paxel",
-        "required": false
-    },
-	{
-		"id": "adapaxels:tech_reborn_bronze_paxel",
-		"required": false
-	},
-	{
-		"id": "adapaxels:ruby_paxel",
-		"required": false
-	},
-	{
-		"id": "adapaxels:sapphire_paxel",
-		"required": false
-	},
-	{
-		"id": "adapaxels:peridot_paxel",
-		"required": false
-	},
-	{
-		"id": "adapaxels:enderite_paxel",
-		"required": false
-	}
+	  "adapaxels:wooden_paxel",
+	  "adapaxels:stone_paxel",
+	  "adapaxels:iron_paxel",
+	  "adapaxels:golden_paxel",
+	  "adapaxels:diamond_paxel",
+	  "adapaxels:netherite_paxel",
+	  {
+		  "id": "adapaxels:vibranium_paxel",
+		  "required": false
+	  },
+	  {
+		  "id": "adapaxels:adamantium_paxel",
+		  "required": false
+	  },
+	  {
+		  "id": "adapaxels:nether_paxel",
+		  "required": false
+	  },
+	  {
+		  "id": "adapaxels:copper_paxel",
+		  "required": false
+	  },
+	  {
+		  "id": "adapaxels:tin_paxel",
+		  "required": false
+	  },
+	  {
+		  "id": "adapaxels:silver_paxel",
+		  "required": false
+	  },
+	  {
+		  "id": "adapaxels:lead_paxel",
+		  "required": false
+	  },
+	  {
+		  "id": "adapaxels:bronze_paxel",
+		  "required": false
+	  },
+	  {
+		  "id": "adapaxels:steel_paxel",
+		  "required": false
+	  },
+	  {
+		  "id": "adapaxels:electrum_paxel",
+		  "required": false
+	  },
+	  {
+		  "id": "adapaxels:rose_gold_paxel",
+		  "required": false
+	  },
+	  {
+		  "id": "adapaxels:sterling_silver_paxel",
+		  "required": false
+	  },
+	  {
+		  "id": "adapaxels:fools_gold_paxel",
+		  "required": false
+	  },
+	  {
+		  "id": "adapaxels:metite_paxel",
+		  "required": false
+	  },
+	  {
+		  "id": "adapaxels:asterite_paxel",
+		  "required": false
+	  },
+	  {
+		  "id": "adapaxels:stellum_paxel",
+		  "required": false
+	  },
+	  {
+		  "id": "adapaxels:galaxium_paxel",
+		  "required": false
+	  },
+	  {
+		  "id": "adapaxels:univite_paxel",
+		  "required": false
+	  },
+	  {
+		  "id": "adapaxels:lunum_paxel",
+		  "required": false
+	  },
+	  {
+		  "id": "adapaxels:meteoric_steel_paxel",
+		  "required": false
+	  },
+	  {
+		  "id": "adapaxels:certus_quartz_paxel",
+		  "required": false
+	  },
+	  {
+		  "id": "adapaxels:nether_quartz_paxel",
+		  "required": false
+	  },
+	  {
+		  "id": "adapaxels:tech_reborn_bronze_paxel",
+		  "required": false
+	  },
+	  {
+		  "id": "adapaxels:ruby_paxel",
+		  "required": false
+	  },
+	  {
+		  "id": "adapaxels:sapphire_paxel",
+		  "required": false
+	  },
+	  {
+		  "id": "adapaxels:peridot_paxel",
+		  "required": false
+	  },
+	  {
+		  "id": "adapaxels:pendorite_paxel",
+		  "required": false
+	  },
+	  {
+		  "id": "adapaxels:enderite_paxel",
+		  "required": false
+	  },
+	  {
+		  "id": "gildednetherite:gilded_paxel",
+		  "required": false
+	  }
   ]
 }

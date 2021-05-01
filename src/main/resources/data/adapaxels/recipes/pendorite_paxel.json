@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "ABC",
+    " S ",
+    " S "
+  ],
+  "key": {
+    "A": {
+      "item": "byg:pendorite_axe"
+    },
+    "B": {
+      "item": "byg:pendorite_pickaxe"
+    },
+	"C": {
+      "item": "byg:pendorite_shovel"
+    },
+	"S": {
+      "item": "minecraft:stick"
+    }
+  },
+  "result": {
+    "item": "adapaxels:pendorite_paxel"
+  }
+}
