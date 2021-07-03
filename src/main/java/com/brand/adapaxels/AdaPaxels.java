@@ -1,8 +1,6 @@
 package com.brand.adapaxels;
 
 import com.brand.adapaxels.mixin.AxeItemAccessor;
-import com.brand.adapaxels.mixin.HoeItemAccessor;
-import com.brand.adapaxels.mixin.PickaxeItemAccessor;
 import com.brand.adapaxels.mixin.ShovelItemAccessor;
 import com.brand.adapaxels.paxels.Paxels;
 import com.brand.adapaxels.paxels.base.PaxelItem;
@@ -24,10 +22,6 @@ public class AdaPaxels implements ModInitializer {
     public void onInitialize() {
         new Paxels();
         Paxels.init();
-        PaxelItem.EFFECTIVE_BLOCKS.addAll(PickaxeItemAccessor.getEffectiveBlocks());
-        PaxelItem.EFFECTIVE_BLOCKS.addAll(AxeItemAccessor.getEffectiveBlocks());
-        PaxelItem.EFFECTIVE_BLOCKS.addAll(ShovelItemAccessor.getEffectiveBlocks());
-        PaxelItem.EFFECTIVE_BLOCKS.addAll(HoeItemAccessor.getEffectiveBlocks());
     }
 }
 

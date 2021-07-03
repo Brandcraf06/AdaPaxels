@@ -12,11 +12,6 @@ import java.util.Set;
 @Mixin(ShovelItem.class)
 public interface ShovelItemAccessor {
 
-    @Accessor("EFFECTIVE_BLOCKS")
-    static Set<Block> getEffectiveBlocks() {
-        return null;
-    }
-
     @Accessor("PATH_STATES")
 	static Map<Block, BlockState> getPathStates() {
         return null;
