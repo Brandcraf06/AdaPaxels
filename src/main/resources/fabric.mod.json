@@ -3,7 +3,7 @@
   "id": "adapaxels",
   "version": "${version}",
   "name": "AdaPaxels",
-  "description": "This mod adds a multitool which combines pickaxe, axe and shovel. Can make Paths, Strip logs and crack Stone Bricks.",
+  "description": "This mod adds a multitool which combines pickaxe, axe and shovel. Can make paths and strip logs.",
   "authors": [
     "Brandcraft06"
   ],
