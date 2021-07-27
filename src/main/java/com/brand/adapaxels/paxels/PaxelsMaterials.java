@@ -42,59 +42,26 @@ public enum PaxelsMaterials implements ToolMaterial {
         return Ingredient.ofItems(Items.NETHER_BRICK);
     }),
 
-    // Astromine
-    COPPER(1, 200, 4f, 1.5f, 10, () -> {
-        return Ingredient.fromTag(TagRegistry.item(Identifier.tryParse("c:copper_ingots")));
-    }),
-    TIN(1, 200, 5f, 1.0f, 10, () -> {
+    // Industrial Revolution
+    TIN(1, 200, 4.0f, 1.0f, 14, () -> {
         return Ingredient.fromTag(TagRegistry.item(Identifier.tryParse("c:tin_ingots")));
     }),
-    SILVER(2, 462, 6.5f, 2.0f, 20, () -> {
-        return Ingredient.fromTag(TagRegistry.item(Identifier.tryParse("c:silver_ingots")));
-    }),
-    LEAD(2, 496, 4.5f, 1.5f, 5, () -> {
-        return Ingredient.fromTag(TagRegistry.item(Identifier.tryParse("c:lead_ingots")));
-    }),
-    BRONZE(2, 539, 7f, 2.5f, 18, () -> {
-        return Ingredient.fromTag(TagRegistry.item(Identifier.tryParse("c:bronze_ingots")));
-    }),
-    STEEL(3, 1043, 7.5f, 3f, 16, () -> {
+    STEEL(3, 600, 4.5f, 2.0f, 14, () -> {
         return Ingredient.fromTag(TagRegistry.item(Identifier.tryParse("c:steel_ingots")));
     }),
-    ELECTRUM(2, 185, 11f, 1.0f, 21, () -> {
-        return Ingredient.fromTag(TagRegistry.item(Identifier.tryParse("c:electrum_ingots")));
+    SILVER(2, 500, 5.0f, 1.0f, 24, () -> {
+        return Ingredient.fromTag(TagRegistry.item(Identifier.tryParse("c:silver_ingots")));
     }),
-    ROSE_GOLD(1, 64, 10.0F, 0.5F, 24, () -> {
-        return Ingredient.fromTag(TagRegistry.item(Identifier.tryParse("c:rose_gold_ingots")));
+    LEAD(2, 900, 3.0f, 2.0f, 8, () -> {
+        return Ingredient.fromTag(TagRegistry.item(Identifier.tryParse("c:lead_ingots")));
     }),
-    STERLING_SILVER(2, 697, 7f, 2.5f, 20, () -> {
-        return Ingredient.fromTag(TagRegistry.item(Identifier.tryParse("c:sterling_silver_ingots")));
+    COPPER(2, 300, 4.5f, 1.0f, 14, () -> {
+        return Ingredient.fromTag(TagRegistry.item(Identifier.tryParse("c:copper_ingots")));
     }),
-    FOOLS_GOLD(2, 250, 6.5F, 2.0F, 16, () -> {
-        return Ingredient.fromTag(TagRegistry.item(Identifier.tryParse("c:fools_gold_ingots")));
+    BRONZE(2, 500, 3.5f, 2.5f, 12, () -> {
+        return Ingredient.fromTag(TagRegistry.item(Identifier.tryParse("c:bronze_ingots")));
     }),
 
-    METITE(1, 853, 13f, 4.0f, 5, () -> {
-        return Ingredient.fromTag(TagRegistry.item(Identifier.tryParse("c:metite_ingots")));
-    }),
-    ASTERITE(5, 2015, 10f, 5.0f, 20, () -> {
-        return Ingredient.fromTag(TagRegistry.item(Identifier.tryParse("c:asterites")));
-    }),
-    STELLUM(5, 2643, 8f, 6.0f, 15, () -> {
-        return Ingredient.fromTag(TagRegistry.item(Identifier.tryParse("c:stellum_ingots")));
-    }),
-    GALAXIUM(6, 3072, 11f, 5.0f, 18, () -> {
-        return Ingredient.fromTag(TagRegistry.item(Identifier.tryParse("c:galaxiums")));
-    }),
-    UNIVITE(7, 3918, 12f, 6.0f, 22, () -> {
-        return Ingredient.fromTag(TagRegistry.item(Identifier.tryParse("c:univite_ingots")));
-    }),
-    LUNUM(4, 1382, 7f, 4.5f, 18, () -> {
-        return Ingredient.fromTag(TagRegistry.item(Identifier.tryParse("c:lunum_ingots")));
-    }),
-    METEORIC_STEEL(3, 949, 10.5f, 3.5f, 10, () -> {
-        return Ingredient.fromTag(TagRegistry.item(Identifier.tryParse("c:meteoric_steel_ingots")));
-    }),
 
     // Applied Energistics 2
 

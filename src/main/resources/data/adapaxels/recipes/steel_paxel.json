@@ -7,13 +7,13 @@
   ],
   "key": {
     "A": {
-      "item": "astromine:steel_axe"
+      "item": "indrev:steel_axe"
     },
     "B": {
-      "item": "astromine:steel_pickaxe"
+      "item": "indrev:steel_pickaxe"
     },
     "C": {
-      "item": "astromine:steel_shovel"
+      "item": "indrev:steel_shovel"
     },
     "S": {
       "item": "minecraft:stick"
