@@ -6,7 +6,6 @@ import com.brand.adapaxels.paxels.base.PaxelBase;
 import com.brand.adapaxels.utils.DynamicWriter;
 import net.fabricmc.loader.api.FabricLoader;
 import net.minecraft.item.Item;
-import net.minecraft.item.Items;
 import net.minecraft.item.ToolMaterial;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.Rarity;
@@ -46,8 +45,10 @@ public class Paxels {
     public static Item RUBY;
     public static Item SAPPHIRE;
     public static Item PERIDOT;
+    public static Item PENDORITE;
     public static Item ENDERITE;
     public static Item GILDED_NETHERITE;
+
 
     public static void init() {
 
@@ -91,6 +92,11 @@ public class Paxels {
             RUBY = register(PaxelsMaterials.RUBY, 1, -2.8f, "ruby", (new Item.Settings()).group(AdaPaxels.ADAPAXELS_GROUP));
             SAPPHIRE = register(PaxelsMaterials.SAPPHIRE, 1, -2.8f, "sapphire", (new Item.Settings()).group(AdaPaxels.ADAPAXELS_GROUP));
             PERIDOT = register(PaxelsMaterials.PERIDOT, 1, -2.8f, "peridot", (new Item.Settings()).group(AdaPaxels.ADAPAXELS_GROUP));
+        }
+
+        // BYG
+        if (FabricLoader.getInstance().isModLoaded("byg")) {
+            PENDORITE = register(PaxelsMaterials.PENDORITE, 2, -2.8F, "pendorite", (new Item.Settings()).group(AdaPaxels.ADAPAXELS_GROUP));
         }
 
         // Enderite Mod

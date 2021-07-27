@@ -96,6 +96,15 @@ public enum PaxelsMaterials implements ToolMaterial {
         return Ingredient.fromTag(TagRegistry.item(Identifier.tryParse("c:meteoric_steel_ingots")));
     }),
 
+    // Applied Energistics 2
+
+    CERTUS_QUARTZ(2, 250, 6.0F, 2.0F, 14, () -> {
+        return Ingredient.ofItems(Registry.ITEM.get(new Identifier("appliedenergistics2", "certus_quartz_crystal")));
+    }),
+    NETHER_QUARTZ(2, 250, 6.0F, 2.0F, 14, () -> {
+        return Ingredient.ofItems(Items.QUARTZ);
+    }),
+
     // Tech Reborn
     TR_BRONZE(2, 375, 7.0F, 2.25f, 6, () -> {
         return Ingredient.ofItems(Registry.ITEM.get(new Identifier("techreborn", "bronze_ingot")));
@@ -110,15 +119,10 @@ public enum PaxelsMaterials implements ToolMaterial {
         return Ingredient.ofItems(Registry.ITEM.get(new Identifier("techreborn", "peridot_gem")));
     }),
 
-    // Applied Energistics 2
-
-    CERTUS_QUARTZ(2, 250, 6.0F, 2.0F, 14, () -> {
-        return Ingredient.ofItems(Registry.ITEM.get(new Identifier("appliedenergistics2", "certus_quartz_crystal")));
+    // BYG
+    PENDORITE(5, 2500, 10.0F, 4.0F, 15, () -> {
+        return Ingredient.ofItems(Registry.ITEM.get(new Identifier("byg", "pendorite_scraps")));
     }),
-    NETHER_QUARTZ(2, 250, 6.0F, 2.0F, 14, () -> {
-        return Ingredient.ofItems(Items.QUARTZ);
-    }),
-
 
     // Enderite Mod
     ENDERITE(4, 4096, 15.0F, 2.0F, 17, () -> {
