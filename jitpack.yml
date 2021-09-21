@@ -1,0 +1,6 @@
+before_install:
+  - source "$HOME/.sdkman/bin/sdkman-init.sh"
+  - sdk install java 16.0.1.j9-adpt
+  - sdk use java 16.0.1.j9-adpt
+install:
+  - ./gradlew build publishToMavenLocal
