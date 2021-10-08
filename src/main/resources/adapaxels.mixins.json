@@ -6,7 +6,8 @@
   "mixins": [
       "AxeItemAccessor",
       "ShovelItemAccessor",
-      "RecipeManagerMixin"
+      "RecipeManagerMixin",
+      "DamageEnchantmentMixin"
   ],
   "injectors": {
     "defaultRequire": 1

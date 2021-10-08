@@ -1,0 +1,10 @@
+{
+  "replace": false,
+  "values": [
+	  "adapaxels:golden_paxel",
+	  {
+		  "id": "gildednetherite:gilded_paxel",
+		  "required": false
+	  }
+  ]
+}

@@ -72,7 +72,7 @@ public class Paxels {
             PERIDOT = register(PaxelsMaterials.PERIDOT, 1, -2.8f, "peridot", (new Item.Settings()).group(AdaPaxels.ADAPAXELS_GROUP));
         }
 
-        // BYG
+        // BYG (Not in 1.17 for now)
         if (FabricLoader.getInstance().isModLoaded("byg")) {
             PENDORITE = register(PaxelsMaterials.PENDORITE, 2, -2.8F, "pendorite", (new Item.Settings()).group(AdaPaxels.ADAPAXELS_GROUP));
         }
@@ -82,7 +82,7 @@ public class Paxels {
             ENDERITE = register(PaxelsMaterials.ENDERITE, 4, -2.8f, "enderite", (new Item.Settings()).group(AdaPaxels.ADAPAXELS_GROUP).fireproof());
         }
 
-        // Gilded Netherite
+        // Gilded Netherite (Seems discontinued)
         if (FabricLoader.getInstance().isModLoaded("gildednetherite")) {
             GILDED_NETHERITE = registerGildedPaxel(PaxelsMaterials.GILDED_NETHERITE, 1, -2.8f, "gilded", (new Item.Settings().group(AdaPaxels.ADAPAXELS_GROUP).fireproof().rarity(Rarity.UNCOMMON)));
             PaxelRecipes.addPaxelRecipe(DynamicWriter.createSmithingRecipeJson(
