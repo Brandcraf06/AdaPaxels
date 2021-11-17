@@ -28,7 +28,7 @@
     "fabric": "*",
     "libcd": "*",
     "minecraft": "1.18.x",
-    "java": ">=16"
+    "java": ">=17"
   },
   "suggests": {
   }
