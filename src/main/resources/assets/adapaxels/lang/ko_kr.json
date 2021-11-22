@@ -1,0 +1,35 @@
+{   
+    "itemGroup.adapaxels.adapaxels_group": "팍셀",
+
+	"item.adapaxels.wooden_paxel": "나무 팍셀",
+	"item.adapaxels.golden_paxel": "금 팍셀",
+	"item.adapaxels.stone_paxel": "돌 팍셀",
+	"item.adapaxels.iron_paxel": "철 팍셀",
+	"item.adapaxels.diamond_paxel": "다이아몬드 팍셀",
+	"item.adapaxels.netherite_paxel": "네더라이트 팍셀",
+	
+	"item.adapaxels.vibranium_paxel": "비브라늄 팍셀",
+	"item.adapaxels.adamantium_paxel": "아다만튬 팍셀",
+	"item.adapaxels.nether_paxel": "네더 팍셀",
+	
+	"item.adapaxels.tin_paxel": "주석 팍셀",	
+	"item.adapaxels.steel_paxel": "강철 팍셀",
+	"item.adapaxels.silver_paxel": "은 팍셀",
+	"item.adapaxels.lead_paxel": "납 팍셀",
+	"item.adapaxels.copper_paxel": "구리 팍셀",
+	"item.adapaxels.bronze_paxel": "청동 팍셀",
+	
+	"item.adapaxels.certus_quartz_paxel": "서투스 석영 팍셀",
+	"item.adapaxels.nether_quartz_paxel": "네더 석영 팍셀",
+	
+	"item.adapaxels.tech_reborn_bronze_paxel": "청동 팍셀",
+	"item.adapaxels.ruby_paxel": "루비 팍셀",
+	"item.adapaxels.sapphire_paxel": "사파이어 팍셀",
+	"item.adapaxels.peridot_paxel": "감람석 팍셀",
+	
+	"item.adapaxels.pendorite_paxel": "펜도라이트 팍셀",
+	
+	"item.adapaxels.enderite_paxel": "엔더라이트 팍셀",
+
+	"item.gildednetherite.gilded_paxel": "도금한 네더라이트 팍셀"
+}
