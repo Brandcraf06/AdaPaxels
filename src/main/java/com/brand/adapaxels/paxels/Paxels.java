@@ -36,7 +36,7 @@ public class Paxels {
     public static Item PERIDOT;
     public static Item PENDORITE;
     public static Item ENDERITE;
-    public static Item GILDED_NETHERITE;
+    public static Item DRAGON;
 
 
     public static void init() {
@@ -82,18 +82,9 @@ public class Paxels {
             ENDERITE = register(PaxelsMaterials.ENDERITE, 4, -2.8f, "enderite", (new Item.Settings()).group(AdaPaxels.ADAPAXELS_GROUP).fireproof());
         }
 
-        // Gilded Netherite (Seems discontinued)
-        if (FabricLoader.getInstance().isModLoaded("gildednetherite")) {
-            GILDED_NETHERITE = registerGildedPaxel(PaxelsMaterials.GILDED_NETHERITE, 1, -2.8f, "gilded", (new Item.Settings().group(AdaPaxels.ADAPAXELS_GROUP).fireproof().rarity(Rarity.UNCOMMON)));
-            PaxelRecipes.addPaxelRecipe(DynamicWriter.createSmithingRecipeJson(
-                    new Identifier(AdaPaxels.MOD_ID, "diamond_paxel"),
-                    new Identifier("gildednetherite", "gilded_ingot"),
-                    new Identifier("gildednetherite", "gilded_paxel")), id("gilded_paxel1"));
-            PaxelRecipes.addPaxelRecipe(DynamicWriter.createSmithingRecipeJson(
-                    new Identifier(AdaPaxels.MOD_ID, "netherite_paxel"),
-                    new Identifier("gildednetherite", "diamond_scrap"),
-                    new Identifier("gildednetherite", "gilded_paxel")),
-                    id("gilded_paxel2"));
+        // DragonLoot
+        if (FabricLoader.getInstance().isModLoaded("dragonloot")) {
+            DRAGON = register(PaxelsMaterials.DRAGON, 1, -2.8f, "dragon", (new Item.Settings()).group(AdaPaxels.ADAPAXELS_GROUP).fireproof());
         }
     }
 

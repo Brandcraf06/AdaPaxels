@@ -97,8 +97,8 @@ public enum PaxelsMaterials implements ToolMaterial {
     }),
 
     // Gilded Netherite
-    GILDED_NETHERITE(4, 2258, 10.0F, 4.2F, 23, () -> {
-        return Ingredient.ofItems(Registry.ITEM.get(new Identifier("gildednetherite", "gilded_ingot")));
+    DRAGON(5, 67 * 37, 12.0F, 5.0F, 20, () -> {
+        return Ingredient.ofItems(Registry.ITEM.get(new Identifier("dragonloot", "dragon_scale")));
     });
 
     private final int miningLevel;

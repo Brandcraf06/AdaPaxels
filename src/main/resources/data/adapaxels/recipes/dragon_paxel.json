@@ -7,26 +7,26 @@
   ],
   "key": {
     "A": {
-      "item": "indrev:copper_axe"
+      "item": "dragonloot:dragon_axe"
     },
     "B": {
-      "item": "indrev:copper_pickaxe"
+      "item": "dragonloot:dragon_pickaxe"
     },
     "C": {
-      "item": "indrev:copper_shovel"
+      "item": "dragonloot:dragon_shovel"
     },
     "S": {
       "item": "minecraft:stick"
     }
   },
   "result": {
-    "item": "adapaxels:copper_paxel"
+    "item": "adapaxels:dragon_paxel"
   },
   "fabric:load_conditions": [
     {
       "condition": "fabric:all_mods_loaded",
       "values": [
-        "indrev"
+        "dragonloot"
       ]
     }
   ]

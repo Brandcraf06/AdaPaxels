@@ -22,5 +22,13 @@
   },
   "result": {
     "item": "adapaxels:nether_paxel"
-  }
+  },
+  "fabric:load_conditions": [
+    {
+      "condition": "fabric:all_mods_loaded",
+      "values": [
+        "adabraniummod"
+      ]
+    }
+  ]
 }

@@ -18,15 +18,17 @@
   "entrypoints": {
     "main": [
       "com.brand.adapaxels.AdaPaxels"
+    ],
+    "fabric-datagen": [
+      "com.brand.adapaxels.data.AdaPaxelsDatagen"
     ]
   },
   "mixins": [
     "adapaxels.mixins.json"
   ],
   "depends": {
-    "fabricloader": ">=0.12.0",
-    "fabric": "*",
-    "libcd": "*",
+    "fabricloader": ">=0.12.12",
+    "fabric": ">=0.46.0",
     "minecraft": "1.18.x",
     "java": ">=17"
   },
