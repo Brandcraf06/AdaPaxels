@@ -37,6 +37,9 @@ public class Paxels {
     public static Item PENDORITE;
     public static Item ENDERITE;
     public static Item DRAGON;
+    public static Item GILDED_NETHERITE;
+    public static Item ROSE_GOLD;
+
 
 
     public static void init() {
@@ -72,7 +75,7 @@ public class Paxels {
             PERIDOT = register(PaxelsMaterials.PERIDOT, 1, -2.8f, "peridot", (new Item.Settings()).group(AdaPaxels.ADAPAXELS_GROUP));
         }
 
-        // BYG (Not in 1.17 for now)
+        // BYG
         if (FabricLoader.getInstance().isModLoaded("byg")) {
             PENDORITE = register(PaxelsMaterials.PENDORITE, 2, -2.8F, "pendorite", (new Item.Settings()).group(AdaPaxels.ADAPAXELS_GROUP));
         }
@@ -86,14 +89,16 @@ public class Paxels {
         if (FabricLoader.getInstance().isModLoaded("dragonloot")) {
             DRAGON = register(PaxelsMaterials.DRAGON, 1, -2.8f, "dragon", (new Item.Settings()).group(AdaPaxels.ADAPAXELS_GROUP).fireproof());
         }
+
+        // Additional Additions
+        if (FabricLoader.getInstance().isModLoaded("additionaladditions")) {
+            GILDED_NETHERITE = register(PaxelsMaterials.GILDED_NETHERITE,  3, -2.6f, "gilded_netherite", (new Item.Settings()).group(AdaPaxels.ADAPAXELS_GROUP));
+            ROSE_GOLD = register(PaxelsMaterials.ROSE_GOLD, 1, -2.8f, "rose_gold", (new Item.Settings()).group(AdaPaxels.ADAPAXELS_GROUP).fireproof());
+        }
     }
 
     private static Item register(ToolMaterial material, int attackDamage, float attackSpeed, String materialname, Item.Settings settings) {
         return Registry.register(Registry.ITEM, id(materialname + "_paxel"), new PaxelBase(material, attackDamage, attackSpeed, settings));
-    }
-
-    private static Item registerGildedPaxel(ToolMaterial material, int attackDamage, float attackSpeed, String materialname, Item.Settings settings) {
-        return Registry.register(Registry.ITEM, new Identifier("gildednetherite", materialname + "_paxel"), new PaxelBase(material, attackDamage, attackSpeed, settings));
     }
 
     public static Identifier id(String name) {

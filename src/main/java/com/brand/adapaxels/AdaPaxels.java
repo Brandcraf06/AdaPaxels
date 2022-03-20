@@ -23,5 +23,8 @@ public class AdaPaxels implements ModInitializer {
         new Paxels();
         Paxels.init();
     }
-}
 
+    public static Identifier id(String name) {
+        return new Identifier(MOD_ID, name);
+    }
+}

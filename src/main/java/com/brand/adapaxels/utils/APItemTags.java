@@ -1,23 +1,19 @@
 package com.brand.adapaxels.utils;
 
 import com.brand.adapaxels.AdaPaxels;
-import net.fabricmc.fabric.api.tag.TagFactory;
-import net.fabricmc.fabric.api.tag.TagRegistry;
-import net.minecraft.block.Block;
 import net.minecraft.item.Item;
-import net.minecraft.tag.Tag;
-import net.minecraft.util.Identifier;
+import net.minecraft.tag.TagKey;
+import net.minecraft.util.registry.Registry;
 
 public class APItemTags {
-    public static final Tag.Identified<Item> PAXELS = create("paxels");
+    public static final TagKey<Item> PAXELS = register("paxels");
 
     private APItemTags() {
         return;
     }
 
-    private static Tag.Identified<Item> create(String path) {
-        return TagFactory.ITEM.create(new Identifier(AdaPaxels.MOD_ID, path));
-
+    private static TagKey<Item> register(String id) {
+        return TagKey.of(Registry.ITEM_KEY, AdaPaxels.id(id));
     }
 }
 

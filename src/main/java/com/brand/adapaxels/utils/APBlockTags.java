@@ -1,22 +1,19 @@
 package com.brand.adapaxels.utils;
 
 import com.brand.adapaxels.AdaPaxels;
-import net.fabricmc.fabric.api.tag.TagFactory;
 import net.minecraft.block.Block;
-import net.minecraft.item.Item;
-import net.minecraft.tag.Tag;
-import net.minecraft.util.Identifier;
+import net.minecraft.tag.TagKey;
+import net.minecraft.util.registry.Registry;
 
 public class APBlockTags {
-    public static final Tag.Identified<Block> PAXEL_MINEABLE = create("mineable/paxel");
+    public static final TagKey<Block> PAXEL_MINEABLE = register("mineable/paxel");
 
     private APBlockTags() {
         return;
     }
 
-    private static Tag.Identified<Block> create(String path) {
-        return TagFactory.BLOCK.create(new Identifier(AdaPaxels.MOD_ID, path));
-
+    private static TagKey<Block> register(String id) {
+        return TagKey.of(Registry.BLOCK_KEY, AdaPaxels.id(id));
     }
 }
 

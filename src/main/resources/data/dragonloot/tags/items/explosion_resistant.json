@@ -1,6 +1,9 @@
 {
-    "replace": false,
-    "values": [
-        "adapaxels:dragon_paxel",
-    ]
+  "replace": false,
+  "values": [
+    {
+      "id": "adapaxels:dragon_paxel",
+      "required": false
+    }
+  ]
 }

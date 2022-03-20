@@ -1,6 +1,5 @@
 package com.brand.adapaxels.paxels;
 
-import net.fabricmc.fabric.api.tag.TagRegistry;
 import net.minecraft.item.Items;
 import net.minecraft.item.ToolMaterial;
 import net.minecraft.recipe.Ingredient;
@@ -44,22 +43,22 @@ public enum PaxelsMaterials implements ToolMaterial {
 
     // Industrial Revolution
     TIN(1, 200, 4.0f, 1.0f, 14, () -> {
-        return Ingredient.fromTag(TagRegistry.item(Identifier.tryParse("c:tin_ingots")));
+        return Ingredient.ofItems(Registry.ITEM.get(new Identifier("indrev", "tin_ingots")));
     }),
     STEEL(3, 600, 4.5f, 2.0f, 14, () -> {
-        return Ingredient.fromTag(TagRegistry.item(Identifier.tryParse("c:steel_ingots")));
+        return Ingredient.ofItems(Registry.ITEM.get(new Identifier("indrev", "steel_ingot")));
     }),
     SILVER(2, 500, 5.0f, 1.0f, 24, () -> {
-        return Ingredient.fromTag(TagRegistry.item(Identifier.tryParse("c:silver_ingots")));
+        return Ingredient.ofItems(Registry.ITEM.get(new Identifier("indrev", "silver_ingot")));
     }),
     LEAD(2, 900, 3.0f, 2.0f, 8, () -> {
-        return Ingredient.fromTag(TagRegistry.item(Identifier.tryParse("c:lead_ingots")));
+        return Ingredient.ofItems(Registry.ITEM.get(new Identifier("indrev", "lead_ingot")));
     }),
     COPPER(2, 300, 4.5f, 1.0f, 14, () -> {
-        return Ingredient.fromTag(TagRegistry.item(Identifier.tryParse("c:copper_ingots")));
+        return Ingredient.ofItems(Registry.ITEM.get(new Identifier("indrev", "copper_ingot")));
     }),
     BRONZE(2, 500, 3.5f, 2.5f, 12, () -> {
-        return Ingredient.fromTag(TagRegistry.item(Identifier.tryParse("c:bronze_ingots")));
+        return Ingredient.ofItems(Registry.ITEM.get(new Identifier("indrev", "bronze_ingot")));
     }),
 
 
@@ -96,9 +95,18 @@ public enum PaxelsMaterials implements ToolMaterial {
         return Ingredient.ofItems(Registry.ITEM.get(new Identifier("enderitemod", "enderite_ingot")));
     }),
 
-    // Gilded Netherite
+    // DragonLoot
     DRAGON(5, 67 * 37, 12.0F, 5.0F, 20, () -> {
         return Ingredient.ofItems(Registry.ITEM.get(new Identifier("dragonloot", "dragon_scale")));
+    }),
+
+    // Additional Additions
+    GILDED_NETHERITE(4, 6000, 9.0F, 2.0F, 24, () -> {
+        return Ingredient.ofItems(Items.NETHERITE_INGOT);
+    }),
+
+    ROSE_GOLD(2, 2700, 9.0F, 2.0F, 17, () -> {
+        return Ingredient.ofItems(Items.COPPER_INGOT);
     });
 
     private final int miningLevel;

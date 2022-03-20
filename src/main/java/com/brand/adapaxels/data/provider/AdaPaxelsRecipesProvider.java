@@ -1,11 +1,10 @@
 package com.brand.adapaxels.data.provider;
 
 import com.brand.adapaxels.paxels.Paxels;
-import net.fabricmc.fabric.api.client.model.ModelProviderContext;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataGenerator;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricRecipesProvider;
 import net.minecraft.data.server.recipe.RecipeJsonProvider;
-import net.minecraft.data.server.recipe.ShapedRecipeJsonFactory;
+import net.minecraft.data.server.recipe.ShapedRecipeJsonBuilder;
 import net.minecraft.item.ItemConvertible;
 import net.minecraft.item.Items;
 
@@ -25,10 +24,10 @@ public class AdaPaxelsRecipesProvider extends FabricRecipesProvider {
         offerPaxelRecipe(exporter, Paxels.GOLDEN, Items.GOLDEN_AXE, Items.GOLDEN_PICKAXE, Items.GOLDEN_SHOVEL, Items.STICK);
         offerPaxelRecipe(exporter, Paxels.DIAMOND, Items.DIAMOND_AXE, Items.DIAMOND_PICKAXE, Items.DIAMOND_SHOVEL, Items.STICK);
         offerPaxelRecipe(exporter, Paxels.NETHERITE, Items.NETHERITE_AXE, Items.NETHERITE_PICKAXE, Items.NETHERITE_SHOVEL, Items.STICK);
-
+        
     }
 
     public static void offerPaxelRecipe(Consumer<RecipeJsonProvider> exporter, ItemConvertible output, ItemConvertible axe, ItemConvertible pickaxe, ItemConvertible shovel, ItemConvertible rod) {
-        ShapedRecipeJsonFactory.create(output).input('A', axe).input('B', pickaxe).input('C', shovel).input('S', rod).pattern("ABC").pattern(" S ").pattern(" S ").criterion(hasItem(pickaxe), conditionsFromItem(pickaxe)).offerTo(exporter);
+        ShapedRecipeJsonBuilder.create(output).input('A', axe).input('B', pickaxe).input('C', shovel).input('S', rod).pattern("ABC").pattern(" S ").pattern(" S ").criterion(hasItem(pickaxe), conditionsFromItem(pickaxe)).offerTo(exporter);
     }
 }

@@ -1,0 +1,33 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "ABC",
+    " S ",
+    " S "
+  ],
+  "key": {
+    "A": {
+      "item": "additionaladditions:gilded_netherite_axe"
+    },
+    "B": {
+      "item": "additionaladditions:gilded_netherite_pickaxe"
+    },
+    "C": {
+      "item": "additionaladditions:gilded_netherite_shovel"
+    },
+    "S": {
+      "item": "minecraft:stick"
+    }
+  },
+  "result": {
+    "item": "adapaxels:gilded_netherite_paxel"
+  },
+  "fabric:load_conditions": [
+    {
+      "condition": "fabric:all_mods_loaded",
+      "values": [
+        "additionaladditions"
+      ]
+    }
+  ]
+}
