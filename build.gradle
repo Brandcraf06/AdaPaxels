@@ -11,18 +11,7 @@ version = "${mod_version}+${minecraft_version}"
 group = project.maven_group
 
 repositories {
-	maven {
-		name = "Fabric"
-		url = "https://maven.fabricmc.net/"
-	}
-	maven {
-		name = "Cotton"
-		url = "https://server.bbkr.space/artifactory/libs-release/"
-	}
-	maven {
-		name = "Jitpack"
-		url = "https://jitpack.io"
-	}
+	maven { url 'https://server.bbkr.space/artifactory/libs-release' }
 	maven { url 'https://www.cursemaven.com' }
 }
 
