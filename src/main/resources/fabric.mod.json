@@ -27,9 +27,9 @@
     "adapaxels.mixins.json"
   ],
   "depends": {
-    "fabricloader": ">=0.12.12",
-    "fabric": ">=0.46.0",
-    "minecraft": "1.18.x",
+    "fabricloader": ">=0.14.9",
+    "fabric-api": "*",
+    "minecraft": "1.19.x",
     "java": ">=17"
   },
   "suggests": {

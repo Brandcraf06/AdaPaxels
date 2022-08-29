@@ -2,7 +2,7 @@ package com.brand.adapaxels.data.provider;
 
 import com.brand.adapaxels.paxels.Paxels;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataGenerator;
-import net.fabricmc.fabric.api.datagen.v1.provider.FabricRecipesProvider;
+import net.fabricmc.fabric.api.datagen.v1.provider.FabricRecipeProvider;
 import net.minecraft.data.server.recipe.RecipeJsonProvider;
 import net.minecraft.data.server.recipe.ShapedRecipeJsonBuilder;
 import net.minecraft.item.ItemConvertible;
@@ -10,7 +10,7 @@ import net.minecraft.item.Items;
 
 import java.util.function.Consumer;
 
-public class AdaPaxelsRecipesProvider extends FabricRecipesProvider {
+public class AdaPaxelsRecipesProvider extends FabricRecipeProvider {
     public AdaPaxelsRecipesProvider(FabricDataGenerator dataGenerator) {
         super(dataGenerator);
     }

@@ -1,9 +1,6 @@
 package com.brand.adapaxels;
 
-import com.brand.adapaxels.mixin.AxeItemAccessor;
-import com.brand.adapaxels.mixin.ShovelItemAccessor;
 import com.brand.adapaxels.paxels.Paxels;
-import com.brand.adapaxels.paxels.base.PaxelItem;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.client.itemgroup.FabricItemGroupBuilder;
 import net.minecraft.item.ItemGroup;

@@ -1,5 +1,5 @@
 plugins {
-	id 'fabric-loom' version '0.10-SNAPSHOT'
+	id 'fabric-loom' version '1.0-SNAPSHOT'
 	id 'maven-publish'
 }
 
@@ -34,6 +34,7 @@ loom {
 
 			name "Data Generation"
 			vmArg "-Dfabric-api.datagen"
+			vmArg "-Dfabric-api.datagen.modid=adapaxels"
 			vmArg "-Dfabric-api.datagen.output-dir=${file("src/main/generated")}"
 
 			runDir "build/datagen"

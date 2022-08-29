@@ -3,7 +3,6 @@ package com.brand.adapaxels.paxels.base;
 import com.brand.adapaxels.mixin.AxeItemAccessor;
 import com.brand.adapaxels.mixin.ShovelItemAccessor;
 import com.brand.adapaxels.utils.APBlockTags;
-import com.brand.adapaxels.utils.APItemTags;
 import com.google.common.collect.BiMap;
 import net.minecraft.advancement.criterion.Criteria;
 import net.minecraft.block.*;
