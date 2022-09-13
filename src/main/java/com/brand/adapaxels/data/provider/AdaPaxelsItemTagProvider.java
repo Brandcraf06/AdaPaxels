@@ -81,7 +81,7 @@ public class AdaPaxelsItemTagProvider extends FabricTagProvider.ItemTagProvider 
         this.getOrCreateTagBuilder(ItemTags.CLUSTER_MAX_HARVESTABLES)
                 .addTag(APItemTags.PAXELS);
 
-        this.getOrCreateTagBuilder(ItemTags.CLUSTER_MAX_HARVESTABLES)
+        this.getOrCreateTagBuilder(ItemTags.PIGLIN_LOVED)
                 .add(Paxels.GOLDEN)
                 .addOptional(AdaPaxels.id( "gilded_netherite_paxel"));
 
