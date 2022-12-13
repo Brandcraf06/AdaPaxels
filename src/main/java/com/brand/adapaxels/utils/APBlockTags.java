@@ -2,8 +2,8 @@ package com.brand.adapaxels.utils;
 
 import com.brand.adapaxels.AdaPaxels;
 import net.minecraft.block.Block;
-import net.minecraft.tag.TagKey;
-import net.minecraft.util.registry.Registry;
+import net.minecraft.registry.RegistryKeys;
+import net.minecraft.registry.tag.TagKey;
 
 public class APBlockTags {
     public static final TagKey<Block> PAXEL_MINEABLE = register("mineable/paxel");
@@ -13,7 +13,7 @@ public class APBlockTags {
     }
 
     private static TagKey<Block> register(String id) {
-        return TagKey.of(Registry.BLOCK_KEY, AdaPaxels.id(id));
+        return TagKey.of(RegistryKeys.BLOCK, AdaPaxels.id(id));
     }
 }
 

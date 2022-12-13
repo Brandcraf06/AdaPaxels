@@ -1,12 +1,12 @@
 package com.brand.adapaxels.paxels;
 
+import com.google.common.base.Suppliers;
 import net.minecraft.item.Items;
 import net.minecraft.item.ToolMaterial;
 import net.minecraft.recipe.Ingredient;
-import net.minecraft.tag.ItemTags;
+import net.minecraft.registry.Registries;
+import net.minecraft.registry.tag.ItemTags;
 import net.minecraft.util.Identifier;
-import net.minecraft.util.Lazy;
-import net.minecraft.util.registry.Registry;
 
 import java.util.function.Supplier;
 
@@ -32,10 +32,10 @@ public enum PaxelsMaterials implements ToolMaterial {
 
     // Adabranium
     VIBRANIUM(4, 2990, 17.0F, 6.0F, 12, () -> {
-        return Ingredient.ofItems(Registry.ITEM.get(new Identifier("adabraniummod", "vibranium_ingot")));
+        return Ingredient.ofItems(Registries.ITEM.get(new Identifier("adabraniummod", "vibranium_ingot")));
     }),
     ADAMANTIUM(4, 4280, 25.0F, 9.0F, 10, () -> {
-        return Ingredient.ofItems(Registry.ITEM.get(new Identifier("adabraniummod", "adamantium_ingot")));
+        return Ingredient.ofItems(Registries.ITEM.get(new Identifier("adabraniummod", "adamantium_ingot")));
     }),
     NETHER_BRICK(2, 381, 8.0F, 2.0F, 15, () -> {
         return Ingredient.ofItems(Items.NETHER_BRICK);
@@ -43,29 +43,29 @@ public enum PaxelsMaterials implements ToolMaterial {
 
     // Industrial Revolution
     TIN(1, 200, 4.0f, 1.0f, 14, () -> {
-        return Ingredient.ofItems(Registry.ITEM.get(new Identifier("indrev", "tin_ingots")));
+        return Ingredient.ofItems(Registries.ITEM.get(new Identifier("indrev", "tin_ingots")));
     }),
     STEEL(3, 600, 4.5f, 2.0f, 14, () -> {
-        return Ingredient.ofItems(Registry.ITEM.get(new Identifier("indrev", "steel_ingot")));
+        return Ingredient.ofItems(Registries.ITEM.get(new Identifier("indrev", "steel_ingot")));
     }),
     SILVER(2, 500, 5.0f, 1.0f, 24, () -> {
-        return Ingredient.ofItems(Registry.ITEM.get(new Identifier("indrev", "silver_ingot")));
+        return Ingredient.ofItems(Registries.ITEM.get(new Identifier("indrev", "silver_ingot")));
     }),
     LEAD(2, 900, 3.0f, 2.0f, 8, () -> {
-        return Ingredient.ofItems(Registry.ITEM.get(new Identifier("indrev", "lead_ingot")));
+        return Ingredient.ofItems(Registries.ITEM.get(new Identifier("indrev", "lead_ingot")));
     }),
     COPPER(2, 300, 4.5f, 1.0f, 14, () -> {
-        return Ingredient.ofItems(Registry.ITEM.get(new Identifier("indrev", "copper_ingot")));
+        return Ingredient.ofItems(Registries.ITEM.get(new Identifier("indrev", "copper_ingot")));
     }),
     BRONZE(2, 500, 3.5f, 2.5f, 12, () -> {
-        return Ingredient.ofItems(Registry.ITEM.get(new Identifier("indrev", "bronze_ingot")));
+        return Ingredient.ofItems(Registries.ITEM.get(new Identifier("indrev", "bronze_ingot")));
     }),
 
 
     // Applied Energistics 2
 
     CERTUS_QUARTZ(2, 250, 6.0F, 2.0F, 14, () -> {
-        return Ingredient.ofItems(Registry.ITEM.get(new Identifier("appliedenergistics2", "certus_quartz_crystal")));
+        return Ingredient.ofItems(Registries.ITEM.get(new Identifier("appliedenergistics2", "certus_quartz_crystal")));
     }),
     NETHER_QUARTZ(2, 250, 6.0F, 2.0F, 14, () -> {
         return Ingredient.ofItems(Items.QUARTZ);
@@ -73,31 +73,31 @@ public enum PaxelsMaterials implements ToolMaterial {
 
     // Tech Reborn
     TR_BRONZE(2, 375, 7.0F, 2.25f, 6, () -> {
-        return Ingredient.ofItems(Registry.ITEM.get(new Identifier("techreborn", "bronze_ingot")));
+        return Ingredient.ofItems(Registries.ITEM.get(new Identifier("techreborn", "bronze_ingot")));
     }),
     RUBY(2, 750, 6.0F, 1.5F, 10, () -> {
-        return Ingredient.ofItems(Registry.ITEM.get(new Identifier("techreborn", "ruby_gem")));
+        return Ingredient.ofItems(Registries.ITEM.get(new Identifier("techreborn", "ruby_gem")));
     }),
     SAPPHIRE(3, 1000, 7.0F, 1.5F, 12, () -> {
-        return Ingredient.ofItems(Registry.ITEM.get(new Identifier("techreborn", "sapphire_gem")));
+        return Ingredient.ofItems(Registries.ITEM.get(new Identifier("techreborn", "sapphire_gem")));
     }),
     PERIDOT(2, 750, 7.0F, 1.5F, 12, () -> {
-        return Ingredient.ofItems(Registry.ITEM.get(new Identifier("techreborn", "peridot_gem")));
+        return Ingredient.ofItems(Registries.ITEM.get(new Identifier("techreborn", "peridot_gem")));
     }),
 
     // BYG
     PENDORITE(5, 2500, 10.0F, 4.0F, 15, () -> {
-        return Ingredient.ofItems(Registry.ITEM.get(new Identifier("byg", "pendorite_scraps")));
+        return Ingredient.ofItems(Registries.ITEM.get(new Identifier("byg", "pendorite_scraps")));
     }),
 
     // Enderite Mod
     ENDERITE(4, 4096, 15.0F, 2.0F, 17, () -> {
-        return Ingredient.ofItems(Registry.ITEM.get(new Identifier("enderitemod", "enderite_ingot")));
+        return Ingredient.ofItems(Registries.ITEM.get(new Identifier("enderitemod", "enderite_ingot")));
     }),
 
     // DragonLoot
     DRAGON(5, 67 * 37, 12.0F, 5.0F, 20, () -> {
-        return Ingredient.ofItems(Registry.ITEM.get(new Identifier("dragonloot", "dragon_scale")));
+        return Ingredient.ofItems(Registries.ITEM.get(new Identifier("dragonloot", "dragon_scale")));
     }),
 
     // Additional Additions
@@ -114,7 +114,7 @@ public enum PaxelsMaterials implements ToolMaterial {
     private final float miningSpeed;
     private final float attackDamage;
     private final int enchantability;
-    private final Lazy<Ingredient> repairIngredient;
+    private final Supplier<Ingredient> repairIngredient;
 
     PaxelsMaterials(int miningLevel, int baseDurability, float miningSpeed, float attackDamage, int enchantability, Supplier<Ingredient> repairIngredient) {
         this.miningLevel = miningLevel;
@@ -122,7 +122,7 @@ public enum PaxelsMaterials implements ToolMaterial {
         this.miningSpeed = miningSpeed;
         this.attackDamage = attackDamage;
         this.enchantability = enchantability;
-        this.repairIngredient = new Lazy<>(repairIngredient);
+        this.repairIngredient = Suppliers.memoize(repairIngredient::get);
     }
 
     public int getDurability() {

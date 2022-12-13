@@ -3,28 +3,30 @@ package com.brand.adapaxels.data.provider;
 import com.brand.adapaxels.AdaPaxels;
 import com.brand.adapaxels.paxels.Paxels;
 import com.brand.adapaxels.utils.APItemTags;
-import net.fabricmc.fabric.api.datagen.v1.FabricDataGenerator;
+import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagProvider;
 import net.fabricmc.fabric.api.tag.convention.v1.ConventionalItemTags;
 import net.minecraft.item.Item;
-import net.minecraft.tag.ItemTags;
-import net.minecraft.tag.TagKey;
+import net.minecraft.registry.RegistryKeys;
+import net.minecraft.registry.RegistryWrapper;
+import net.minecraft.registry.tag.ItemTags;
+import net.minecraft.registry.tag.TagKey;
 import net.minecraft.util.Identifier;
-import net.minecraft.util.registry.Registry;
+
+import java.util.concurrent.CompletableFuture;
 
 public class AdaPaxelsItemTagProvider extends FabricTagProvider.ItemTagProvider {
-    public AdaPaxelsItemTagProvider(FabricDataGenerator dataGenerator, FabricTagProvider.BlockTagProvider blockTags) {
-        super(dataGenerator, blockTags);
+    public AdaPaxelsItemTagProvider(FabricDataOutput dataGenerator, CompletableFuture<RegistryWrapper.WrapperLookup> completableFuture, FabricTagProvider.BlockTagProvider blockTags) {
+        super(dataGenerator, completableFuture, blockTags);
     }
 
-    private FabricTagBuilder<Item> getOrCreateTagBuilder(Identifier id) {
-        TagKey<Item> tag = TagKey.of(Registry.ITEM_KEY, id);
+    private FabricTagBuilder getOrCreateTagBuilder(Identifier id) {
+        TagKey<Item> tag = TagKey.of(RegistryKeys.ITEM, id);
         return this.getOrCreateTagBuilder(tag);
     }
 
     @Override
-    protected void generateTags() {
-
+    protected void configure(RegistryWrapper.WrapperLookup arg) {
         this.getOrCreateTagBuilder(APItemTags.PAXELS)
                 .add(Paxels.WOOD)
                 .add(Paxels.STONE)
