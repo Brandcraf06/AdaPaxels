@@ -2,8 +2,8 @@ package com.brand.adapaxels.utils;
 
 import com.brand.adapaxels.AdaPaxels;
 import net.minecraft.item.Item;
-import net.minecraft.registry.RegistryKeys;
-import net.minecraft.registry.tag.TagKey;
+import net.minecraft.tag.TagKey;
+import net.minecraft.util.registry.Registry;
 
 public class APItemTags {
     public static final TagKey<Item> PAXELS = register("paxels");
@@ -13,7 +13,7 @@ public class APItemTags {
     }
 
     private static TagKey<Item> register(String id) {
-        return TagKey.of(RegistryKeys.ITEM, AdaPaxels.id(id));
+        return TagKey.of(Registry.ITEM_KEY, AdaPaxels.id(id));
     }
 }
 

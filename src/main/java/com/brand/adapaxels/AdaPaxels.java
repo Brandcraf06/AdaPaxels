@@ -2,7 +2,7 @@ package com.brand.adapaxels;
 
 import com.brand.adapaxels.paxels.Paxels;
 import net.fabricmc.api.ModInitializer;
-import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
+import net.fabricmc.fabric.api.client.itemgroup.FabricItemGroupBuilder;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.Identifier;
@@ -13,7 +13,7 @@ public class AdaPaxels implements ModInitializer {
 
     public static final String MOD_ID = "adapaxels";
     public static final Logger LOGGER = LogManager.getLogger();
-    public static final ItemGroup ADAPAXELS_GROUP = FabricItemGroup.builder(new Identifier(MOD_ID, "adapaxels_group")).icon(() -> new ItemStack(Paxels.NETHERITE)).build();
+    public static final ItemGroup ADAPAXELS_GROUP = FabricItemGroupBuilder.build(new Identifier(MOD_ID, "adapaxels_group"), () -> new ItemStack(Paxels.NETHERITE));
 
     @Override
     public void onInitialize() {
