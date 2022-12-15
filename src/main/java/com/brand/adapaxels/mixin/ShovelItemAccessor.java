@@ -12,7 +12,7 @@ import java.util.Map;
 public interface ShovelItemAccessor {
 
     @Accessor("PATH_STATES")
-	static Map<Block, BlockState> getPathStates() {
+    static Map<Block, BlockState> getPathStates() {
         return null;
     }
 }

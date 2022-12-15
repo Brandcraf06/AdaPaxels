@@ -25,7 +25,7 @@ public class AdaPaxelsRecipesProvider extends FabricRecipeProvider {
         offerPaxelRecipe(exporter, Paxels.GOLDEN, Items.GOLDEN_AXE, Items.GOLDEN_PICKAXE, Items.GOLDEN_SHOVEL, Items.STICK);
         offerPaxelRecipe(exporter, Paxels.DIAMOND, Items.DIAMOND_AXE, Items.DIAMOND_PICKAXE, Items.DIAMOND_SHOVEL, Items.STICK);
         offerPaxelRecipe(exporter, Paxels.NETHERITE, Items.NETHERITE_AXE, Items.NETHERITE_PICKAXE, Items.NETHERITE_SHOVEL, Items.STICK);
-        
+
     }
 
     public static void offerPaxelRecipe(Consumer<RecipeJsonProvider> exporter, ItemConvertible output, ItemConvertible axe, ItemConvertible pickaxe, ItemConvertible shovel, ItemConvertible rod) {

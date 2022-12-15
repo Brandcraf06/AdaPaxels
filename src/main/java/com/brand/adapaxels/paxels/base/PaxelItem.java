@@ -35,7 +35,7 @@ public class PaxelItem extends MiningToolItem {
         BlockState blockState = world.getBlockState(blockPos);
         Optional<BlockState> optional = this.getStrippedState(blockState);
         Optional<BlockState> optional2 = Oxidizable.getDecreasedOxidationState(blockState);
-        Optional<BlockState> optional3 = Optional.ofNullable((Block)((BiMap)HoneycombItem.WAXED_TO_UNWAXED_BLOCKS.get()).get(blockState.getBlock())).map((block) -> {
+        Optional<BlockState> optional3 = Optional.ofNullable((Block) ((BiMap) HoneycombItem.WAXED_TO_UNWAXED_BLOCKS.get()).get(blockState.getBlock())).map((block) -> {
             return block.getStateWithProperties(blockState);
         });
         ItemStack itemStack = context.getStack();
@@ -55,7 +55,7 @@ public class PaxelItem extends MiningToolItem {
 
         if (optional4.isPresent()) {
             if (playerEntity instanceof ServerPlayerEntity) {
-                Criteria.ITEM_USED_ON_BLOCK.trigger((ServerPlayerEntity)playerEntity, blockPos, itemStack);
+                Criteria.ITEM_USED_ON_BLOCK.trigger((ServerPlayerEntity) playerEntity, blockPos, itemStack);
             }
 
             world.setBlockState(blockPos, optional4.get(), 11);

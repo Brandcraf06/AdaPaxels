@@ -46,7 +46,6 @@ public class Paxels {
     public static List<Item> items = null;
 
 
-
     public static void init() {
 
         // Adabranium
@@ -58,12 +57,12 @@ public class Paxels {
 
         // Industrial Revolution
         if (FabricLoader.getInstance().isModLoaded("indrev")) {
-            TIN = register(PaxelsMaterials.TIN,  1, -1.0f, "tin", (new Item.Settings()));
+            TIN = register(PaxelsMaterials.TIN, 1, -1.0f, "tin", (new Item.Settings()));
             STEEL = register(PaxelsMaterials.STEEL, 2, -1.8f, "steel", (new Item.Settings()));
-            SILVER = register(PaxelsMaterials.SILVER,  1, -1.0f, "silver", (new Item.Settings()));
+            SILVER = register(PaxelsMaterials.SILVER, 1, -1.0f, "silver", (new Item.Settings()));
             LEAD = register(PaxelsMaterials.LEAD, 1, -1.0f, "lead", (new Item.Settings()));
             COPPER = register(PaxelsMaterials.COPPER, 1, -1.0f, "copper", (new Item.Settings()));
-            BRONZE = register(PaxelsMaterials.BRONZE,  1, -1.0f, "bronze", (new Item.Settings()));
+            BRONZE = register(PaxelsMaterials.BRONZE, 1, -1.0f, "bronze", (new Item.Settings()));
         }
 
         // Applied Energistics 2
@@ -85,19 +84,19 @@ public class Paxels {
             PENDORITE = register(PaxelsMaterials.PENDORITE, 2, -2.8F, "pendorite", (new Item.Settings()));
         }
 
-        // Enderite Mod
+        // Enderite Mod (probably discontinued / Last update june 2022)
         if (FabricLoader.getInstance().isModLoaded("enderitemod")) {
             ENDERITE = register(PaxelsMaterials.ENDERITE, 4, -2.8f, "enderite", (new Item.Settings()).fireproof());
         }
 
-        // DragonLoot
+        // DragonLoot (maybe discontinued / Last update august 2022)
         if (FabricLoader.getInstance().isModLoaded("dragonloot")) {
             DRAGON = register(PaxelsMaterials.DRAGON, 1, -2.8f, "dragon", (new Item.Settings()).fireproof());
         }
 
         // Additional Additions
         if (FabricLoader.getInstance().isModLoaded("additionaladditions")) {
-            GILDED_NETHERITE = register(PaxelsMaterials.GILDED_NETHERITE,  3, -2.6f, "gilded_netherite", (new Item.Settings()));
+            GILDED_NETHERITE = register(PaxelsMaterials.GILDED_NETHERITE, 3, -2.6f, "gilded_netherite", (new Item.Settings()));
             ROSE_GOLD = register(PaxelsMaterials.ROSE_GOLD, 1, -2.8f, "rose_gold", (new Item.Settings()).fireproof());
         }
 

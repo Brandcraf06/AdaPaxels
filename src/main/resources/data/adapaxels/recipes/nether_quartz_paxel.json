@@ -1,5 +1,6 @@
 {
   "type": "minecraft:crafting_shaped",
+  "category": "equipment",
   "pattern": [
     "ABC",
     " S ",
@@ -12,10 +13,10 @@
     "B": {
       "item": "appliedenergistics2:nether_quartz_pickaxe"
     },
-	"C": {
+    "C": {
       "item": "appliedenergistics2:nether_quartz_shovel"
     },
-	"S": {
+    "S": {
       "item": "minecraft:stick"
     }
   },

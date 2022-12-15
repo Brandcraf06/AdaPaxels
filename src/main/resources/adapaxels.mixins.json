@@ -1,13 +1,13 @@
 {
   "required": true,
   "package": "com.brand.adapaxels.mixin",
-  "compatibilityLevel": "JAVA_8",
+  "compatibilityLevel": "JAVA_17",
   "minVersion": "0.7.11-SNAPSHOT",
   "mixins": [
-      "AxeItemAccessor",
-      "ShovelItemAccessor",
-      "RecipeManagerMixin",
-      "DamageEnchantmentMixin"
+    "AxeItemAccessor",
+    "ShovelItemAccessor",
+    "RecipeManagerMixin",
+    "DamageEnchantmentMixin"
   ],
   "injectors": {
     "defaultRequire": 1
