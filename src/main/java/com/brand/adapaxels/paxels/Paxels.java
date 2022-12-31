@@ -17,6 +17,7 @@ import java.util.List;
 
 public class Paxels {
 
+    protected static final List<Item> items = new ArrayList<>();
     public static Item WOOD = register(PaxelsMaterials.WOOD, 1, -2.8f, "wooden", (new Item.Settings()));
     public static Item STONE = register(PaxelsMaterials.STONE, 1, -2.8f, "stone", (new Item.Settings()));
     public static Item IRON = register(PaxelsMaterials.IRON, 1, -2.8f, "iron", (new Item.Settings()));
@@ -43,7 +44,6 @@ public class Paxels {
     public static Item DRAGON;
     public static Item GILDED_NETHERITE;
     public static Item ROSE_GOLD;
-    public static List<Item> items = null;
 
 
     public static void init() {
@@ -109,9 +109,6 @@ public class Paxels {
 
     private static Item register(ToolMaterial material, int attackDamage, float attackSpeed, String materialname, Item.Settings settings) {
         var item = Registry.register(Registries.ITEM, id(materialname + "_paxel"), new PaxelItem(material, attackDamage, attackSpeed, settings));
-        if (items == null) {
-            items = new ArrayList<>();
-        }
         items.add(item);
         return item;
     }
