@@ -5,7 +5,6 @@ import com.brand.adapaxels.paxels.Paxels;
 import com.brand.adapaxels.utils.APItemTags;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagProvider;
-import net.fabricmc.fabric.api.tag.convention.v1.ConventionalItemTags;
 import net.minecraft.item.Item;
 import net.minecraft.registry.RegistryKeys;
 import net.minecraft.registry.RegistryWrapper;
@@ -68,16 +67,16 @@ public class AdaPaxelsItemTagProvider extends FabricTagProvider.ItemTagProvider 
         this.getOrCreateTagBuilder(new Identifier("enderitemod", "enderite_items"))
                 .addOptional(AdaPaxels.id("enderite_paxel"));
 
-        this.getOrCreateTagBuilder(ConventionalItemTags.AXES)
+        this.getOrCreateTagBuilder(ItemTags.AXES)
                 .addTag(APItemTags.PAXELS);
 
-        this.getOrCreateTagBuilder(ConventionalItemTags.PICKAXES)
+        this.getOrCreateTagBuilder(ItemTags.PICKAXES)
                 .addTag(APItemTags.PAXELS);
 
-        this.getOrCreateTagBuilder(ConventionalItemTags.SHOVELS)
+        this.getOrCreateTagBuilder(ItemTags.SHOVELS)
                 .addTag(APItemTags.PAXELS);
 
-        this.getOrCreateTagBuilder(ConventionalItemTags.HOES)
+        this.getOrCreateTagBuilder(ItemTags.HOES)
                 .addTag(APItemTags.PAXELS);
 
         this.getOrCreateTagBuilder(ItemTags.CLUSTER_MAX_HARVESTABLES)

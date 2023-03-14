@@ -48,14 +48,14 @@ public class Paxels {
 
     public static void init() {
 
-        // Adabranium
+        // Adabranium https://www.curseforge.com/minecraft/mc-mods/adabranium
         if (FabricLoader.getInstance().isModLoaded("adabraniummod")) {
             VIBRANIUM = register(PaxelsMaterials.VIBRANIUM, 1, -2.8f, "vibranium", (new FabricItemSettings()));
             ADAMANTIUM = register(PaxelsMaterials.ADAMANTIUM, 1, -2.8f, "adamantium", (new Item.Settings()));
             NETHER_BRICK = register(PaxelsMaterials.NETHER_BRICK, 1, -2.8f, "nether", (new Item.Settings()).fireproof());
         }
 
-        // Industrial Revolution
+        // Industrial Revolution https://www.curseforge.com/minecraft/mc-mods/industrial-revolution
         if (FabricLoader.getInstance().isModLoaded("indrev")) {
             TIN = register(PaxelsMaterials.TIN, 1, -1.0f, "tin", (new Item.Settings()));
             STEEL = register(PaxelsMaterials.STEEL, 2, -1.8f, "steel", (new Item.Settings()));
@@ -65,13 +65,13 @@ public class Paxels {
             BRONZE = register(PaxelsMaterials.BRONZE, 1, -1.0f, "bronze", (new Item.Settings()));
         }
 
-        // Applied Energistics 2
+        // Applied Energistics 2 https://www.curseforge.com/minecraft/mc-mods/applied-energistics-2
         if (FabricLoader.getInstance().isModLoaded("appliedenergistics2")) {
             CERTUS_QUARTZ = register(PaxelsMaterials.CERTUS_QUARTZ, 1, -2.8f, "certus_quartz", (new Item.Settings()));
             NETHER_QUARTZ = register(PaxelsMaterials.NETHER_QUARTZ, 1, -2.8f, "nether_quartz", (new Item.Settings()));
         }
 
-        // Tech Reborn
+        // Tech Reborn https://www.curseforge.com/minecraft/mc-mods/techreborn
         if (FabricLoader.getInstance().isModLoaded("techreborn")) {
             TR_BRONZE = register(PaxelsMaterials.TR_BRONZE, 1, -2.8f, "tech_reborn_bronze", (new Item.Settings()));
             RUBY = register(PaxelsMaterials.RUBY, 1, -2.8f, "ruby", (new Item.Settings()));
@@ -79,22 +79,22 @@ public class Paxels {
             PERIDOT = register(PaxelsMaterials.PERIDOT, 1, -2.8f, "peridot", (new Item.Settings()));
         }
 
-        // BYG
+        // BYG https://www.curseforge.com/minecraft/mc-mods/oh-the-biomes-youll-go-fabric
         if (FabricLoader.getInstance().isModLoaded("byg")) {
             PENDORITE = register(PaxelsMaterials.PENDORITE, 2, -2.8F, "pendorite", (new Item.Settings()));
         }
 
-        // Enderite Mod (probably discontinued / Last update june 2022)
+        // Enderite Mod https://www.curseforge.com/minecraft/mc-mods/enderite-mod-for-fabric
         if (FabricLoader.getInstance().isModLoaded("enderitemod")) {
             ENDERITE = register(PaxelsMaterials.ENDERITE, 4, -2.8f, "enderite", (new Item.Settings()).fireproof());
         }
 
-        // DragonLoot (maybe discontinued / Last update august 2022)
+        // DragonLoot https://www.curseforge.com/minecraft/mc-mods/dragonloot
         if (FabricLoader.getInstance().isModLoaded("dragonloot")) {
             DRAGON = register(PaxelsMaterials.DRAGON, 1, -2.8f, "dragon", (new Item.Settings()).fireproof());
         }
 
-        // Additional Additions
+        // Additional Additions https://www.curseforge.com/minecraft/mc-mods/additional-additions
         if (FabricLoader.getInstance().isModLoaded("additionaladditions")) {
             GILDED_NETHERITE = register(PaxelsMaterials.GILDED_NETHERITE, 3, -2.6f, "gilded_netherite", (new Item.Settings()));
             ROSE_GOLD = register(PaxelsMaterials.ROSE_GOLD, 1, -2.8f, "rose_gold", (new Item.Settings()).fireproof());
