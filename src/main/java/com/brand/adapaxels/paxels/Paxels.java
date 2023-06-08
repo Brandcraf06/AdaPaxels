@@ -4,12 +4,15 @@ package com.brand.adapaxels.paxels;
 import com.brand.adapaxels.AdaPaxels;
 import com.brand.adapaxels.paxels.base.PaxelItem;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
+import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.fabricmc.loader.api.FabricLoader;
 import net.minecraft.item.Item;
+import net.minecraft.item.ItemStack;
 import net.minecraft.item.ToolMaterial;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
+import net.minecraft.text.Text;
 import net.minecraft.util.Identifier;
 
 import java.util.ArrayList;
@@ -99,6 +102,12 @@ public class Paxels {
             GILDED_NETHERITE = register(PaxelsMaterials.GILDED_NETHERITE, 3, -2.6f, "gilded_netherite", (new Item.Settings()));
             ROSE_GOLD = register(PaxelsMaterials.ROSE_GOLD, 1, -2.8f, "rose_gold", (new Item.Settings()).fireproof());
         }
+
+        Registry.register(Registries.ITEM_GROUP, AdaPaxels.ADAPAXELS_GROUP, FabricItemGroup.builder()
+                .displayName(Text.translatable("itemGroup.adapaxels.adapaxels_group"))
+                .icon(() -> new ItemStack(Paxels.NETHERITE))
+                .build()
+        );
 
         ItemGroupEvents.modifyEntriesEvent(AdaPaxels.ADAPAXELS_GROUP).register(content -> {
             for (Item item : items) {
