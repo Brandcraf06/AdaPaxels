@@ -24,6 +24,5 @@ jobs:
       - uses: gradle/wrapper-validation-action@v1
       - run: ./gradlew checkVersion build publish publishMods --stacktrace -Porg.gradle.parallel.threads=4
         env:
-          CURSEFORGE_API_KEY: ${{ secrets.CURSEFORGE_API_KEY }}
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          CURSEFORGE_TOKEN: ${{ secrets.CURSEFORGE_TOKEN }}
           MODRINTH_TOKEN: ${{ secrets.MODRINTH_TOKEN }}
