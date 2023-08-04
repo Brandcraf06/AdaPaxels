@@ -5,7 +5,7 @@ permissions:
   contents: write
 
 jobs:
-  build:
+  publish:
     runs-on: ubuntu-22.04
     container:
       image: eclipse-temurin:20-jdk
