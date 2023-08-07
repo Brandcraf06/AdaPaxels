@@ -22,7 +22,6 @@ bin/
 # fabric
 
 run/
-src/main/generated/
 
 .mixin.out/
 crash-reports/
