@@ -30,6 +30,5 @@
     "recipes": [
       "adapaxels:iron_paxel"
     ]
-  },
-  "sends_telemetry_event": false
+  }
 }

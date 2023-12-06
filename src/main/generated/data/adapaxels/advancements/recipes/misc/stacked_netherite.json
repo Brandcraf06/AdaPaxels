@@ -30,6 +30,5 @@
     "recipes": [
       "adapaxels:stacked_netherite"
     ]
-  },
-  "sends_telemetry_event": false
+  }
 }

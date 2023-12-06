@@ -30,6 +30,5 @@
     "recipes": [
       "adapaxels:wooden_paxel"
     ]
-  },
-  "sends_telemetry_event": false
+  }
 }

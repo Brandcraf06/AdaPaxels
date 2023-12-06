@@ -30,6 +30,5 @@
     "recipes": [
       "adapaxels:golden_paxel"
     ]
-  },
-  "sends_telemetry_event": false
+  }
 }
