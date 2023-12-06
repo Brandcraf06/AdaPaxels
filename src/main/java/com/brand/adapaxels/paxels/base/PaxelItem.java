@@ -8,6 +8,7 @@ import net.minecraft.advancement.criterion.Criteria;
 import net.minecraft.block.*;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.*;
+import net.minecraft.registry.tag.BlockTags;
 import net.minecraft.server.network.ServerPlayerEntity;
 import net.minecraft.sound.SoundCategory;
 import net.minecraft.sound.SoundEvents;
@@ -21,11 +22,11 @@ import java.util.Optional;
 
 @SuppressWarnings({"rawtypes"})
 public class PaxelItem extends MiningToolItem {
-    private static final Map<Block, Block> STRIPPED_BLOCKS;
     private static final Map<Block, BlockState> PATH_STATES;
 
     public PaxelItem(ToolMaterial material, float attackDamage, float attackSpeed, Item.Settings settings) {
         super(attackDamage, attackSpeed, material, APBlockTags.PAXEL_MINEABLE, settings);
+
     }
 
     public ActionResult useOnBlock(ItemUsageContext context) {
@@ -102,13 +103,12 @@ public class PaxelItem extends MiningToolItem {
     }
 
     private Optional<BlockState> getStrippedState(BlockState state) {
-        return Optional.ofNullable(STRIPPED_BLOCKS.get(state.getBlock())).map((block) -> {
+        return Optional.ofNullable(AxeItem.STRIPPED_BLOCKS.get(state.getBlock())).map((block) -> {
             return block.getDefaultState().with(PillarBlock.AXIS, state.get(PillarBlock.AXIS));
         });
     }
 
     static {
-        STRIPPED_BLOCKS = AxeItemAccessor.getStrippedBlocks();
         PATH_STATES = ShovelItemAccessor.getPathStates();
     }
 }
