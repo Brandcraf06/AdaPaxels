@@ -28,7 +28,7 @@ dependencies {
 }
 
 loom {
-
+	accessWidenerPath = file("src/main/resources/adapaxels.accesswidener")
 	runs {
 		datagen {
 			server()
