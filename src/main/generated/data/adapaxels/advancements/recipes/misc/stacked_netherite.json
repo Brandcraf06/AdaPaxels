@@ -1,12 +1,12 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_stone_pickaxe": {
+    "has_netherite_ingot": {
       "conditions": {
         "items": [
           {
             "items": [
-              "minecraft:stone_pickaxe"
+              "minecraft:netherite_ingot"
             ]
           }
         ]
@@ -15,7 +15,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "adapaxels:stone_paxel"
+        "recipe": "adapaxels:stacked_netherite"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -23,12 +23,12 @@
   "requirements": [
     [
       "has_the_recipe",
-      "has_stone_pickaxe"
+      "has_netherite_ingot"
     ]
   ],
   "rewards": {
     "recipes": [
-      "adapaxels:stone_paxel"
+      "adapaxels:stacked_netherite"
     ]
   },
   "sends_telemetry_event": false

@@ -1,4 +1,4 @@
-package com.brand.adapaxels.paxels;
+package com.brand.adapaxels.content.paxels;
 
 import com.google.common.base.Suppliers;
 import net.minecraft.item.Items;

@@ -9,7 +9,6 @@ public class APItemTags {
     public static final TagKey<Item> PAXELS = register("paxels");
 
     private APItemTags() {
-        return;
     }
 
     private static TagKey<Item> register(String id) {

@@ -1,8 +1,8 @@
-package com.brand.adapaxels.paxels;
+package com.brand.adapaxels.content.paxels;
 
 
 import com.brand.adapaxels.AdaPaxels;
-import com.brand.adapaxels.paxels.base.PaxelItem;
+import com.brand.adapaxels.content.paxels.base.PaxelItem;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
@@ -82,11 +82,6 @@ public class Paxels {
             PERIDOT = register(PaxelsMaterials.PERIDOT, 1, -2.8f, "peridot", (new Item.Settings()));
         }
 
-        // BYG https://www.curseforge.com/minecraft/mc-mods/oh-the-biomes-youll-go-fabric
-        if (FabricLoader.getInstance().isModLoaded("byg")) {
-            PENDORITE = register(PaxelsMaterials.PENDORITE, 2, -2.8F, "pendorite", (new Item.Settings()));
-        }
-
         // Enderite Mod https://www.curseforge.com/minecraft/mc-mods/enderite-mod-for-fabric
         if (FabricLoader.getInstance().isModLoaded("enderitemod")) {
             ENDERITE = register(PaxelsMaterials.ENDERITE, 4, -2.8f, "enderite", (new Item.Settings()).fireproof());
@@ -101,6 +96,11 @@ public class Paxels {
         if (FabricLoader.getInstance().isModLoaded("additionaladditions")) {
             GILDED_NETHERITE = register(PaxelsMaterials.GILDED_NETHERITE, 3, -2.6f, "gilded_netherite", (new Item.Settings()));
             ROSE_GOLD = register(PaxelsMaterials.ROSE_GOLD, 1, -2.8f, "rose_gold", (new Item.Settings()).fireproof());
+        }
+
+        // BYG https://www.curseforge.com/minecraft/mc-mods/oh-the-biomes-youll-go-fabric (Not in 1.20)
+        if (FabricLoader.getInstance().isModLoaded("byg")) {
+            PENDORITE = register(PaxelsMaterials.PENDORITE, 2, -2.8F, "pendorite", (new Item.Settings()));
         }
 
         Registry.register(Registries.ITEM_GROUP, AdaPaxels.ADAPAXELS_GROUP, FabricItemGroup.builder()

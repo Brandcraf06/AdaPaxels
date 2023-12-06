@@ -1,10 +1,9 @@
 package com.brand.adapaxels;
 
-import com.brand.adapaxels.paxels.Paxels;
+import com.brand.adapaxels.content.paxels.Paxels;
+import com.brand.adapaxels.content.AdapaxelsItems;
 import net.fabricmc.api.ModInitializer;
-import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
 import net.minecraft.item.ItemGroup;
-import net.minecraft.item.ItemStack;
 import net.minecraft.registry.RegistryKey;
 import net.minecraft.registry.RegistryKeys;
 import net.minecraft.util.Identifier;
@@ -21,6 +20,7 @@ public class AdaPaxels implements ModInitializer {
     public void onInitialize() {
         new Paxels();
         Paxels.init();
+        new AdapaxelsItems();
     }
 
     public static Identifier id(String name) {

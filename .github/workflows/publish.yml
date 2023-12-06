@@ -1,5 +1,5 @@
 name: Publish
-on: [pull_request, workflow_dispatch] # Manual trigger
+on: [workflow_dispatch] # Manual trigger
 
 permissions:
   contents: write
@@ -21,8 +21,10 @@ jobs:
         with:
           context: changelog
           workflow_id: publish.yml
+      - name: make gradle wrapper executable
+        run: chmod +x ./gradlew
       - uses: gradle/wrapper-validation-action@v1
-      - run: ./gradlew checkVersion build publish publishMods --stacktrace -Porg.gradle.parallel.threads=4
+      - run: ./gradlew build publish publishMods --stacktrace -Porg.gradle.parallel.threads=4
         env:
           CURSEFORGE_TOKEN: ${{ secrets.CURSEFORGE_TOKEN }}
           MODRINTH_TOKEN: ${{ secrets.MODRINTH_TOKEN }}

@@ -1,4 +1,4 @@
-package com.brand.adapaxels.paxels.base;
+package com.brand.adapaxels.content.paxels.base;
 
 import com.brand.adapaxels.mixin.ShovelItemAccessor;
 import com.brand.adapaxels.utils.APBlockTags;

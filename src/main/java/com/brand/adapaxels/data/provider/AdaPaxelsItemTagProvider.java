@@ -1,7 +1,7 @@
 package com.brand.adapaxels.data.provider;
 
 import com.brand.adapaxels.AdaPaxels;
-import com.brand.adapaxels.paxels.Paxels;
+import com.brand.adapaxels.content.paxels.Paxels;
 import com.brand.adapaxels.utils.APItemTags;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagProvider;
@@ -33,39 +33,39 @@ public class AdaPaxelsItemTagProvider extends FabricTagProvider.ItemTagProvider 
                 .add(Paxels.GOLDEN)
                 .add(Paxels.DIAMOND)
                 .add(Paxels.NETHERITE)
-                .addOptional(AdaPaxels.id("vibranium_paxel"))
-                .addOptional(AdaPaxels.id("adamantium_paxel"))
-                .addOptional(AdaPaxels.id("nether_paxel"))
+                .addOptional(moddedPaxel("vibranium"))
+                .addOptional(moddedPaxel("adamantium"))
+                .addOptional(moddedPaxel("nether"))
 
-                .addOptional(AdaPaxels.id("tin_paxel"))
-                .addOptional(AdaPaxels.id("steel_paxel"))
-                .addOptional(AdaPaxels.id("silver_paxel"))
-                .addOptional(AdaPaxels.id("lead_paxel"))
-                .addOptional(AdaPaxels.id("copper_paxel"))
-                .addOptional(AdaPaxels.id("bronze_paxel"))
+                .addOptional(moddedPaxel("tin"))
+                .addOptional(moddedPaxel("steel"))
+                .addOptional(moddedPaxel("silver"))
+                .addOptional(moddedPaxel("lead"))
+                .addOptional(moddedPaxel("copper"))
+                .addOptional(moddedPaxel("bronze"))
 
-                .addOptional(AdaPaxels.id("certus_quartz_paxel"))
-                .addOptional(AdaPaxels.id("nether_quartz_paxel"))
+                .addOptional(moddedPaxel("certus_quartz"))
+                .addOptional(moddedPaxel("nether_quartz"))
 
-                .addOptional(AdaPaxels.id("tech_reborn_bronze_paxel"))
-                .addOptional(AdaPaxels.id("ruby_paxel"))
-                .addOptional(AdaPaxels.id("sapphire_paxel"))
-                .addOptional(AdaPaxels.id("peridot_paxel"))
+                .addOptional(moddedPaxel("tech_reborn_bronze"))
+                .addOptional(moddedPaxel("ruby"))
+                .addOptional(moddedPaxel("sapphire"))
+                .addOptional(moddedPaxel("peridot"))
 
-                .addOptional(AdaPaxels.id("pendorite_paxel"))
+                .addOptional(moddedPaxel("pendorite"))
 
-                .addOptional(AdaPaxels.id("enderite_paxel"))
+                .addOptional(moddedPaxel("enderite"))
 
-                .addOptional(AdaPaxels.id("dragon_paxel"))
+                .addOptional(moddedPaxel("dragon"))
 
-                .addOptional(AdaPaxels.id("gilded_netherite_paxel"))
-                .addOptional(AdaPaxels.id("rose_gold_paxel"));
+                .addOptional(moddedPaxel("gilded_netherite"))
+                .addOptional(moddedPaxel("rose_gold"));
 
         this.getOrCreateTagBuilder(new Identifier("dragonloot", "explosion_resistant"))
-                .addOptional(AdaPaxels.id("dragon_paxel"));
+                .addOptional(moddedPaxel("dragon"));
 
         this.getOrCreateTagBuilder(new Identifier("enderitemod", "enderite_items"))
-                .addOptional(AdaPaxels.id("enderite_paxel"));
+                .addOptional(moddedPaxel("enderite"));
 
         this.getOrCreateTagBuilder(ItemTags.AXES)
                 .addTag(APItemTags.PAXELS);
@@ -84,8 +84,10 @@ public class AdaPaxelsItemTagProvider extends FabricTagProvider.ItemTagProvider 
 
         this.getOrCreateTagBuilder(ItemTags.PIGLIN_LOVED)
                 .add(Paxels.GOLDEN)
-                .addOptional(AdaPaxels.id("gilded_netherite_paxel"));
+                .addOptional(moddedPaxel("gilded_netherite"));
+    }
 
-
+    private Identifier moddedPaxel(String material) {
+        return AdaPaxels.id(material + "_paxel");
     }
 }

@@ -9,7 +9,6 @@ public class APBlockTags {
     public static final TagKey<Block> PAXEL_MINEABLE = register("mineable/paxel");
 
     private APBlockTags() {
-        return;
     }
 
     private static TagKey<Block> register(String id) {

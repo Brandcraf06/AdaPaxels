@@ -1,6 +1,6 @@
 package com.brand.adapaxels.mixin;
 
-import com.brand.adapaxels.paxels.base.PaxelItem;
+import com.brand.adapaxels.content.paxels.base.PaxelItem;
 import net.minecraft.enchantment.DamageEnchantment;
 import net.minecraft.enchantment.Enchantment;
 import net.minecraft.enchantment.EnchantmentTarget;
@@ -21,6 +21,6 @@ public class DamageEnchantmentMixin extends Enchantment {
 
     @Inject(method = "isAcceptableItem", at = @At("RETURN"), cancellable = true)
     private void injected(ItemStack stack, CallbackInfoReturnable<Boolean> cir) {
-        cir.setReturnValue(stack.getItem() instanceof AxeItem ? true : stack.getItem() instanceof PaxelItem ? true : super.isAcceptableItem(stack));
+        cir.setReturnValue(stack.getItem() instanceof AxeItem || stack.getItem() instanceof PaxelItem || super.isAcceptableItem(stack));
     }
 }
