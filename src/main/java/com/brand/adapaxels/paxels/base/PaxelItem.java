@@ -1,6 +1,5 @@
 package com.brand.adapaxels.paxels.base;
 
-import com.brand.adapaxels.mixin.AxeItemAccessor;
 import com.brand.adapaxels.mixin.ShovelItemAccessor;
 import com.brand.adapaxels.utils.APBlockTags;
 import com.google.common.collect.BiMap;
@@ -8,7 +7,6 @@ import net.minecraft.advancement.criterion.Criteria;
 import net.minecraft.block.*;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.*;
-import net.minecraft.registry.tag.BlockTags;
 import net.minecraft.server.network.ServerPlayerEntity;
 import net.minecraft.sound.SoundCategory;
 import net.minecraft.sound.SoundEvents;
