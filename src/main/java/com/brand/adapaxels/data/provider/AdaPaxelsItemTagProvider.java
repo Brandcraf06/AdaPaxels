@@ -2,7 +2,7 @@ package com.brand.adapaxels.data.provider;
 
 import com.brand.adapaxels.AdaPaxels;
 import com.brand.adapaxels.content.paxels.Paxels;
-import com.brand.adapaxels.utils.APItemTags;
+import com.brand.adapaxels.tags.APItemTags;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagProvider;
 import net.minecraft.item.Item;
@@ -52,8 +52,6 @@ public class AdaPaxelsItemTagProvider extends FabricTagProvider.ItemTagProvider 
                 .addOptional(moddedPaxel("sapphire"))
                 .addOptional(moddedPaxel("peridot"))
 
-                .addOptional(moddedPaxel("pendorite"))
-
                 .addOptional(moddedPaxel("enderite"))
 
                 .addOptional(moddedPaxel("dragon"))
@@ -61,10 +59,10 @@ public class AdaPaxelsItemTagProvider extends FabricTagProvider.ItemTagProvider 
                 .addOptional(moddedPaxel("gilded_netherite"))
                 .addOptional(moddedPaxel("rose_gold"));
 
-        this.getOrCreateTagBuilder(new Identifier("dragonloot", "explosion_resistant"))
+        this.getOrCreateTagBuilder(Identifier.of("dragonloot", "explosion_resistant"))
                 .addOptional(moddedPaxel("dragon"));
 
-        this.getOrCreateTagBuilder(new Identifier("enderitemod", "enderite_items"))
+        this.getOrCreateTagBuilder(Identifier.of("enderitemod", "enderite_items"))
                 .addOptional(moddedPaxel("enderite"));
 
         this.getOrCreateTagBuilder(ItemTags.AXES)

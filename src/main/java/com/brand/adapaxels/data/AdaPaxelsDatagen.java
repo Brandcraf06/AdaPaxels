@@ -15,7 +15,5 @@ public class AdaPaxelsDatagen implements DataGeneratorEntrypoint {
         pack.addProvider(AdaPaxelsRecipesProvider::new);
         FabricTagProvider.BlockTagProvider blockTags = pack.addProvider(AdaPaxelsBlockTagProvider::new);
         pack.addProvider((dataOutput, registryFuture) -> new AdaPaxelsItemTagProvider(dataOutput, registryFuture, blockTags));
-
-
     }
 }

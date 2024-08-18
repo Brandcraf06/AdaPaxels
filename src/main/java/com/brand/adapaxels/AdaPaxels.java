@@ -14,7 +14,7 @@ public class AdaPaxels implements ModInitializer {
 
     public static final String MOD_ID = "adapaxels";
     public static final Logger LOGGER = LogManager.getLogger();
-    public static final RegistryKey<ItemGroup> ADAPAXELS_GROUP = RegistryKey.of(RegistryKeys.ITEM_GROUP, new Identifier(MOD_ID, "adapaxels_group"));
+    public static final RegistryKey<ItemGroup> ADAPAXELS_GROUP = RegistryKey.of(RegistryKeys.ITEM_GROUP, id("adapaxels_group"));
 
     @Override
     public void onInitialize() {
@@ -25,6 +25,6 @@ public class AdaPaxels implements ModInitializer {
     }
 
     public static Identifier id(String name) {
-        return new Identifier(MOD_ID, name);
+        return Identifier.of(MOD_ID, name);
     }
 }

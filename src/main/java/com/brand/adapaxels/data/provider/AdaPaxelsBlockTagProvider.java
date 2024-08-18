@@ -1,6 +1,6 @@
 package com.brand.adapaxels.data.provider;
 
-import com.brand.adapaxels.utils.APBlockTags;
+import com.brand.adapaxels.tags.APBlockTags;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagProvider;
 import net.minecraft.registry.RegistryWrapper;

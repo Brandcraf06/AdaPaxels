@@ -13,10 +13,13 @@ import net.minecraft.item.ItemConvertible;
 import net.minecraft.item.Items;
 import net.minecraft.recipe.Ingredient;
 import net.minecraft.recipe.book.RecipeCategory;
+import net.minecraft.registry.RegistryWrapper;
+
+import java.util.concurrent.CompletableFuture;
 
 public class AdaPaxelsRecipesProvider extends FabricRecipeProvider {
-    public AdaPaxelsRecipesProvider(FabricDataOutput dataOutput) {
-        super(dataOutput);
+    public AdaPaxelsRecipesProvider(FabricDataOutput output, CompletableFuture<RegistryWrapper.WrapperLookup> registriesFuture) {
+        super(output, registriesFuture);
     }
 
     @Override
