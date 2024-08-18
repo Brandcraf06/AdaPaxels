@@ -21,7 +21,8 @@
     }
   },
   "result": {
-    "item": "adapaxels:gilded_netherite_paxel"
+    "count": 1,
+    "id": "adapaxels:gilded_netherite_paxel"
   },
   "fabric:load_conditions": [
     {

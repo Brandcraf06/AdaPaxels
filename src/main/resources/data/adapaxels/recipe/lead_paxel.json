@@ -21,7 +21,8 @@
     }
   },
   "result": {
-    "item": "adapaxels:lead_paxel"
+    "count": 1,
+    "id": "adapaxels:lead_paxel"
   },
   "fabric:load_conditions": [
     {

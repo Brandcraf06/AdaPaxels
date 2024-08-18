@@ -21,7 +21,8 @@
     }
   },
   "result": {
-    "item": "adapaxels:sapphire_paxel"
+    "count": 1,
+    "id": "adapaxels:sapphire_paxel"
   },
   "fabric:load_conditions": [
     {

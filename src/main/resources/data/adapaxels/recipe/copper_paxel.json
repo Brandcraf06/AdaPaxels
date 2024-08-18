@@ -21,7 +21,8 @@
     }
   },
   "result": {
-    "item": "adapaxels:copper_paxel"
+    "count": 1,
+    "id": "adapaxels:copper_paxel"
   },
   "fabric:load_conditions": [
     {

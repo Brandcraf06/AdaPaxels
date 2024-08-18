@@ -21,7 +21,8 @@
     }
   },
   "result": {
-    "item": "adapaxels:adamantium_paxel"
+    "count": 1,
+    "id": "adapaxels:adamantium_paxel"
   },
   "fabric:load_conditions": [
     {

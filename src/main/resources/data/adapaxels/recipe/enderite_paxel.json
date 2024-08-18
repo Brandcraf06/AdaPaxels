@@ -21,7 +21,8 @@
     }
   },
   "result": {
-    "item": "adapaxels:enderite_paxel"
+    "count": 1,
+    "id": "adapaxels:enderite_paxel"
   },
   "fabric:load_conditions": [
     {

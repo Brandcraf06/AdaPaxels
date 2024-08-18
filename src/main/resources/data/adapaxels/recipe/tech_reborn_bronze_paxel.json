@@ -21,7 +21,8 @@
     }
   },
   "result": {
-    "item": "adapaxels:tech_reborn_bronze_paxel"
+    "count": 1,
+    "id": "adapaxels:tech_reborn_bronze_paxel"
   },
   "fabric:load_conditions": [
     {

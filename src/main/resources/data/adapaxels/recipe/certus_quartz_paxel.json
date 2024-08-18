@@ -21,7 +21,8 @@
     }
   },
   "result": {
-    "item": "adapaxels:certus_quartz_paxel"
+    "count": 1,
+    "id": "adapaxels:certus_quartz_paxel"
   },
   "fabric:load_conditions": [
     {

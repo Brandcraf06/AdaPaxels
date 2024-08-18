@@ -22,7 +22,8 @@
     }
   },
   "result": {
-    "item": "adapaxels:nether_paxel"
+    "count": 1,
+    "id": "adapaxels:nether_paxel"
   },
   "fabric:load_conditions": [
     {

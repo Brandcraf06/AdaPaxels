@@ -21,7 +21,8 @@
     }
   },
   "result": {
-    "item": "adapaxels:bronze_paxel"
+    "count": 1,
+    "id": "adapaxels:bronze_paxel"
   },
   "fabric:load_conditions": [
     {

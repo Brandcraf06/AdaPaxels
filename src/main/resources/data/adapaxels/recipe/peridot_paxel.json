@@ -21,7 +21,8 @@
     }
   },
   "result": {
-    "item": "adapaxels:peridot_paxel"
+    "count": 1,
+    "id": "adapaxels:peridot_paxel"
   },
   "fabric:load_conditions": [
     {

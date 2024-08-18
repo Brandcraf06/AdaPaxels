@@ -21,7 +21,8 @@
     }
   },
   "result": {
-    "item": "adapaxels:rose_gold_paxel"
+    "count": 1,
+    "id": "adapaxels:rose_gold_paxel"
   },
   "fabric:load_conditions": [
     {

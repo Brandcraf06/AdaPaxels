@@ -21,7 +21,8 @@
     }
   },
   "result": {
-    "item": "adapaxels:silver_paxel"
+    "count": 1,
+    "id": "adapaxels:silver_paxel"
   },
   "fabric:load_conditions": [
     {

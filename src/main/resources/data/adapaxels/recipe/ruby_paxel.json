@@ -21,7 +21,8 @@
     }
   },
   "result": {
-    "item": "adapaxels:ruby_paxel"
+    "count": 1,
+    "id": "adapaxels:ruby_paxel"
   },
   "fabric:load_conditions": [
     {

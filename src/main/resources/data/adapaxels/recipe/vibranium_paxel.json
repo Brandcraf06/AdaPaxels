@@ -21,7 +21,8 @@
     }
   },
   "result": {
-    "item": "adapaxels:vibranium_paxel"
+    "count": 1,
+    "id": "adapaxels:vibranium_paxel"
   },
   "fabric:load_conditions": [
     {

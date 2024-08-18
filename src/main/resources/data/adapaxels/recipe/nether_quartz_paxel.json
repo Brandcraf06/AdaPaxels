@@ -21,7 +21,8 @@
     }
   },
   "result": {
-    "item": "adapaxels:nether_quartz_paxel"
+    "count": 1,
+    "id": "adapaxels:nether_quartz_paxel"
   },
   "fabric:load_conditions": [
     {
