@@ -2,18 +2,10 @@
   "type": "minecraft:crafting_shaped",
   "category": "equipment",
   "key": {
-    "A": {
-      "item": "minecraft:stone_axe"
-    },
-    "B": {
-      "item": "minecraft:stone_pickaxe"
-    },
-    "C": {
-      "item": "minecraft:stone_shovel"
-    },
-    "S": {
-      "item": "minecraft:stick"
-    }
+    "A": "minecraft:stone_axe",
+    "B": "minecraft:stone_pickaxe",
+    "C": "minecraft:stone_shovel",
+    "S": "minecraft:stick"
   },
   "pattern": [
     "ABC",
@@ -21,7 +13,6 @@
     " S "
   ],
   "result": {
-    "count": 1,
     "id": "adapaxels:stone_paxel"
   }
 }

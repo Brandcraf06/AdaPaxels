@@ -1,27 +1,18 @@
 {
   "type": "minecraft:crafting_shaped",
   "category": "equipment",
+  "key": {
+    "A": "techreborn:sapphire_axe",
+    "B": "techreborn:sapphire_pickaxe",
+    "C": "techreborn:sapphire_shovel",
+    "S": "minecraft:stick"
+  },
   "pattern": [
     "ABC",
     " S ",
     " S "
   ],
-  "key": {
-    "A": {
-      "item": "techreborn:sapphire_axe"
-    },
-    "B": {
-      "item": "techreborn:sapphire_pickaxe"
-    },
-    "C": {
-      "item": "techreborn:sapphire_spade"
-    },
-    "S": {
-      "item": "minecraft:stick"
-    }
-  },
   "result": {
-    "count": 1,
     "id": "adapaxels:sapphire_paxel"
   },
   "fabric:load_conditions": [

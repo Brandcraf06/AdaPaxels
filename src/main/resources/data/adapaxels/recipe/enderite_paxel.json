@@ -1,27 +1,18 @@
 {
   "type": "minecraft:crafting_shaped",
   "category": "equipment",
+  "key": {
+    "A": "enderitemod:enderite_axe",
+    "B": "enderitemod:enderite_pickaxe",
+    "C": "enderitemod:enderite_shovel",
+    "S": "minecraft:stick"
+  },
   "pattern": [
     "ABC",
     " S ",
     " S "
   ],
-  "key": {
-    "A": {
-      "item": "enderitemod:enderite_axe"
-    },
-    "B": {
-      "item": "enderitemod:enderite_pickaxe"
-    },
-    "C": {
-      "item": "enderitemod:enderite_shovel"
-    },
-    "S": {
-      "item": "minecraft:stick"
-    }
-  },
   "result": {
-    "count": 1,
     "id": "adapaxels:enderite_paxel"
   },
   "fabric:load_conditions": [

@@ -1,1 +1,2 @@
-### Updated to **1.21.1**
+### Updated to **26.1.2**
+* Added Copper Paxel

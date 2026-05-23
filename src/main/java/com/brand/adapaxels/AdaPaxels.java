@@ -1,12 +1,10 @@
 package com.brand.adapaxels;
 
+import com.brand.adapaxels.content.AdapaxelsItemGroup;
 import com.brand.adapaxels.content.AdapaxelsItems;
 import com.brand.adapaxels.content.paxels.Paxels;
 import net.fabricmc.api.ModInitializer;
-import net.minecraft.item.ItemGroup;
-import net.minecraft.registry.RegistryKey;
-import net.minecraft.registry.RegistryKeys;
-import net.minecraft.util.Identifier;
+import net.minecraft.resources.Identifier;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -14,7 +12,6 @@ public class AdaPaxels implements ModInitializer {
 
     public static final String MOD_ID = "adapaxels";
     public static final Logger LOGGER = LogManager.getLogger();
-    public static final RegistryKey<ItemGroup> ADAPAXELS_GROUP = RegistryKey.of(RegistryKeys.ITEM_GROUP, id("adapaxels_group"));
 
     @Override
     public void onInitialize() {
@@ -22,9 +19,11 @@ public class AdaPaxels implements ModInitializer {
         Paxels.init();
         new AdapaxelsItems();
         AdapaxelsItems.init();
+        AdapaxelsItemGroup.init();
+
     }
 
     public static Identifier id(String name) {
-        return Identifier.of(MOD_ID, name);
+        return Identifier.fromNamespaceAndPath(MOD_ID, name);
     }
 }

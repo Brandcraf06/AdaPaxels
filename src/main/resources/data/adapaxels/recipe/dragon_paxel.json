@@ -1,27 +1,18 @@
 {
   "type": "minecraft:crafting_shaped",
   "category": "equipment",
+  "key": {
+    "A": "dragonloot:dragon_axe",
+    "B": "dragonloot:dragon_pickaxe",
+    "C": "dragonloot:dragon_shovel",
+    "S": "minecraft:stick"
+  },
   "pattern": [
     "ABC",
     " S ",
     " S "
   ],
-  "key": {
-    "A": {
-      "item": "dragonloot:dragon_axe"
-    },
-    "B": {
-      "item": "dragonloot:dragon_pickaxe"
-    },
-    "C": {
-      "item": "dragonloot:dragon_shovel"
-    },
-    "S": {
-      "item": "minecraft:stick"
-    }
-  },
   "result": {
-    "count": 1,
     "id": "adapaxels:dragon_paxel"
   },
   "fabric:load_conditions": [

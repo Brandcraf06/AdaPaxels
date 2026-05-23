@@ -1,16 +1,9 @@
 {
   "type": "minecraft:smithing_transform",
-  "addition": {
-    "item": "adapaxels:stacked_netherite"
-  },
-  "base": {
-    "item": "adapaxels:diamond_paxel"
-  },
+  "addition": "adapaxels:stacked_netherite",
+  "base": "adapaxels:diamond_paxel",
   "result": {
-    "count": 1,
     "id": "adapaxels:netherite_paxel"
   },
-  "template": {
-    "item": "minecraft:netherite_upgrade_smithing_template"
-  }
+  "template": "minecraft:netherite_upgrade_smithing_template"
 }

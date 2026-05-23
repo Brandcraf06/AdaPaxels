@@ -1,35 +1,25 @@
 {
   "type": "minecraft:crafting_shaped",
   "category": "equipment",
-  "group": "nether_paxel",
+  "key": {
+    "A": "adabranium:nether_axe",
+    "B": "adabranium:nether_pickaxe",
+    "C": "adabranium:nether_shovel",
+    "S": "minecraft:stick"
+  },
   "pattern": [
     "ABC",
     " S ",
     " S "
   ],
-  "key": {
-    "A": {
-      "item": "adabraniummod:nether_axe"
-    },
-    "B": {
-      "item": "adabraniummod:nether_pickaxe"
-    },
-    "C": {
-      "item": "adabraniummod:nether_shovel"
-    },
-    "S": {
-      "item": "minecraft:stick"
-    }
-  },
   "result": {
-    "count": 1,
     "id": "adapaxels:nether_paxel"
   },
   "fabric:load_conditions": [
     {
       "condition": "fabric:all_mods_loaded",
       "values": [
-        "adabraniummod"
+        "adabranium"
       ]
     }
   ]

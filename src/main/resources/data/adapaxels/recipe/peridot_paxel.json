@@ -1,27 +1,18 @@
 {
   "type": "minecraft:crafting_shaped",
   "category": "equipment",
+  "key": {
+    "A": "techreborn:peridot_axe",
+    "B": "techreborn:peridot_pickaxe",
+    "C": "techreborn:peridot_shovel",
+    "S": "minecraft:stick"
+  },
   "pattern": [
     "ABC",
     " S ",
     " S "
   ],
-  "key": {
-    "A": {
-      "item": "techreborn:peridot_axe"
-    },
-    "B": {
-      "item": "techreborn:peridot_pickaxe"
-    },
-    "C": {
-      "item": "techreborn:peridot_spade"
-    },
-    "S": {
-      "item": "minecraft:stick"
-    }
-  },
   "result": {
-    "count": 1,
     "id": "adapaxels:peridot_paxel"
   },
   "fabric:load_conditions": [

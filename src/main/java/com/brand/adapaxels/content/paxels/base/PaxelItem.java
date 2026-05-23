@@ -2,138 +2,136 @@ package com.brand.adapaxels.content.paxels.base;
 
 import com.brand.adapaxels.tags.APBlockTags;
 import com.google.common.collect.BiMap;
+import net.fabricmc.fabric.mixin.content.registry.AxeItemAccessor;
 import net.fabricmc.fabric.mixin.content.registry.ShovelItemAccessor;
-import net.minecraft.advancement.criterion.Criteria;
-import net.minecraft.block.*;
-import net.minecraft.entity.LivingEntity;
-import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.item.*;
-import net.minecraft.server.network.ServerPlayerEntity;
-import net.minecraft.sound.SoundCategory;
-import net.minecraft.sound.SoundEvents;
-import net.minecraft.util.ActionResult;
-import net.minecraft.util.Hand;
-import net.minecraft.util.math.BlockPos;
-import net.minecraft.util.math.Direction;
-import net.minecraft.world.World;
-import net.minecraft.world.event.GameEvent;
-import org.jetbrains.annotations.Nullable;
+import net.minecraft.advancements.CriteriaTriggers;
+import net.minecraft.core.BlockPos;
+import net.minecraft.core.Direction;
+import net.minecraft.core.component.DataComponents;
+import net.minecraft.server.level.ServerPlayer;
+import net.minecraft.sounds.SoundEvent;
+import net.minecraft.sounds.SoundEvents;
+import net.minecraft.sounds.SoundSource;
+import net.minecraft.world.InteractionHand;
+import net.minecraft.world.InteractionResult;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.item.HoneycombItem;
+import net.minecraft.world.item.Item;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.ToolMaterial;
+import net.minecraft.world.item.context.UseOnContext;
+import net.minecraft.world.level.Level;
+import net.minecraft.world.level.block.*;
+import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.level.block.state.properties.ChestType;
+import net.minecraft.world.level.gameevent.GameEvent;
 
 import java.util.Map;
 import java.util.Optional;
 
-@SuppressWarnings({"rawtypes"})
-public class PaxelItem extends MiningToolItem {
-    private final String materialName;
-    private static final Map<Block, BlockState> PATH_STATES;
+public class PaxelItem extends Item {
+    public static final Map<Block, BlockState> FLATTENABLES;
+    public static final Map<Block, Block> STRIPPABLES;
 
-    public PaxelItem(ToolMaterial material, Item.Settings settings, String materialName) {
-        super(material, APBlockTags.PAXEL_MINEABLE, settings);
-        this.materialName = materialName;
+    public PaxelItem(final ToolMaterial material, final float attackDamageBaseline, final float attackSpeedBaseline, final Item.Properties properties) {
+        super(properties.tool(material, APBlockTags.MINEABLE_WITH_PAXEL, attackDamageBaseline, attackSpeedBaseline, 0.0F));
     }
 
-    public String getMaterialName() {
-        return materialName;
+    public InteractionResult useOn(final UseOnContext context) {
+        Level level = context.getLevel();
+        BlockPos pos = context.getClickedPos();
+        Player player = context.getPlayer();
+
+        if (playerHasBlockingItemUseIntent(context)) {
+            return InteractionResult.PASS;
+        }
+
+        if (stripBlock(context, level, pos, player)) {
+            return InteractionResult.SUCCESS;
+        }
+
+        if (context.getClickedFace() == Direction.DOWN) {
+            return InteractionResult.PASS;
+        }
+
+        if (flattenOrExtinguishBlock(context, level, pos, player)) {
+            return InteractionResult.SUCCESS;
+        }
+
+        return InteractionResult.PASS;
     }
 
-    public ActionResult useOnBlock(ItemUsageContext context) {
-        World world = context.getWorld();
-        BlockPos blockPos = context.getBlockPos();
-        PlayerEntity playerEntity = context.getPlayer();
-
-        if (shouldCancelStripAttempt(context)) {
-            return ActionResult.PASS;
-        }
-
-        if (stripBlock(context, world, blockPos, playerEntity)) {
-            return ActionResult.success(world.isClient);
-        }
-
-        if (context.getSide() == Direction.DOWN) {
-            return ActionResult.PASS;
-        }
-
-        if (flattenOrExtinguishBlock(context, world, blockPos, playerEntity)) {
-            return ActionResult.success(world.isClient);
-        }
-
-        return ActionResult.PASS;
-    }
-
-    private boolean stripBlock(ItemUsageContext context, World world, BlockPos blockPos, PlayerEntity playerEntity) {
-        Optional<BlockState> optional = this.tryStrip(world, blockPos, playerEntity, world.getBlockState(blockPos));
-        if (optional.isPresent()) {
-            ItemStack itemStack = context.getStack();
-            if (playerEntity instanceof ServerPlayerEntity) {
-                Criteria.ITEM_USED_ON_BLOCK.trigger((ServerPlayerEntity) playerEntity, blockPos, itemStack);
-            }
-
-            BlockState newState = optional.get();
-            world.setBlockState(blockPos, newState, 11);
-            world.emitGameEvent(GameEvent.BLOCK_CHANGE, blockPos, GameEvent.Emitter.of(playerEntity, newState));
-
-            if (playerEntity != null) {
-                itemStack.damage(1, playerEntity, LivingEntity.getSlotForHand(context.getHand()));
-            }
-
-            return true;
-        }
-        return false;
-    }
-
-    private boolean flattenOrExtinguishBlock(ItemUsageContext context, World world, BlockPos blockPos, PlayerEntity playerEntity) {
-        BlockState blockState = world.getBlockState(blockPos);
-        BlockState blockState2 = PATH_STATES.get(blockState.getBlock());
-
-        if (blockState2 != null && world.getBlockState(blockPos.up()).isAir()) {
-            world.playSound(playerEntity, blockPos, SoundEvents.ITEM_SHOVEL_FLATTEN, SoundCategory.BLOCKS, 1.0F, 1.0F);
-            updateBlockState(world, blockPos, blockState2, playerEntity, context);
-            return true;
-        }
-
-        if (blockState.getBlock() instanceof CampfireBlock && blockState.get(CampfireBlock.LIT)) {
-            if (!world.isClient()) {
-                world.syncWorldEvent(null, 1009, blockPos, 0);
-            }
-            CampfireBlock.extinguish(context.getPlayer(), world, blockPos, blockState);
-            BlockState blockState3 = blockState.with(CampfireBlock.LIT, false);
-            updateBlockState(world, blockPos, blockState3, playerEntity, context);
-            return true;
-        }
-
-        return false;
-    }
-
-    private void updateBlockState(World world, BlockPos blockPos, BlockState newState, PlayerEntity playerEntity, ItemUsageContext context) {
-        world.setBlockState(blockPos, newState, 11);
-        world.emitGameEvent(GameEvent.BLOCK_CHANGE, blockPos, GameEvent.Emitter.of(playerEntity, newState));
-        if (playerEntity != null) {
-            context.getStack().damage(1, playerEntity, LivingEntity.getSlotForHand(context.getHand()));
-        }
-    }
-
-    private static boolean shouldCancelStripAttempt(ItemUsageContext context) {
-        PlayerEntity playerEntity = context.getPlayer();
-        return context.getHand().equals(Hand.MAIN_HAND) && playerEntity.getOffHandStack().isOf(Items.SHIELD) && !playerEntity.shouldCancelInteraction();
-    }
-
-    private Optional<BlockState> tryStrip(World world, BlockPos pos, @Nullable PlayerEntity player, BlockState state) {
-        Optional<BlockState> optional = this.getStrippedState(state);
-        if (optional.isPresent()) {
-            world.playSound(player, pos, SoundEvents.ITEM_AXE_STRIP, SoundCategory.BLOCKS, 1.0F, 1.0F);
-            return optional;
+    private boolean stripBlock(UseOnContext context, Level level, BlockPos pos, Player player) {
+        Optional<BlockState> newBlock = this.evaluateNewBlockState(level, pos, player, level.getBlockState(pos));
+        if (newBlock.isEmpty()) {
+            return false;
         } else {
-            Optional<BlockState> optional2 = Oxidizable.getDecreasedOxidationState(state);
-            if (optional2.isPresent()) {
-                world.playSound(player, pos, SoundEvents.ITEM_AXE_SCRAPE, SoundCategory.BLOCKS, 1.0F, 1.0F);
-                world.syncWorldEvent(player, 3005, pos, 0);
-                return optional2;
+            ItemStack itemInHand = context.getItemInHand();
+            if (player instanceof ServerPlayer) {
+                CriteriaTriggers.ITEM_USED_ON_BLOCK.trigger((ServerPlayer) player, pos, itemInHand);
+            }
+
+            level.setBlock(pos, newBlock.get(), 11);
+            level.gameEvent(GameEvent.BLOCK_CHANGE, pos, GameEvent.Context.of(player, newBlock.get()));
+            if (player != null) {
+                itemInHand.hurtAndBreak(1, player, context.getHand().asEquipmentSlot());
+            }
+
+            return true;
+        }
+    }
+
+    private boolean flattenOrExtinguishBlock(UseOnContext context, Level level, BlockPos pos, Player player) {
+        BlockState blockState = level.getBlockState(pos);
+        BlockState newState = FLATTENABLES.get(blockState.getBlock());
+        BlockState updatedState = null;
+        if (newState != null && level.getBlockState(pos.above()).isAir()) {
+            level.playSound(player, pos, SoundEvents.SHOVEL_FLATTEN, SoundSource.BLOCKS, 1.0F, 1.0F);
+            updatedState = newState;
+        } else if (blockState.getBlock() instanceof CampfireBlock && blockState.getValue(CampfireBlock.LIT)) {
+            if (!level.isClientSide()) {
+                level.levelEvent(null, 1009, pos, 0);
+            }
+
+            CampfireBlock.dowse(context.getPlayer(), level, pos, blockState);
+            updatedState = blockState.setValue(CampfireBlock.LIT, false);
+        }
+
+        if (updatedState != null) {
+            if (!level.isClientSide()) {
+                level.setBlock(pos, updatedState, 11);
+                level.gameEvent(GameEvent.BLOCK_CHANGE, pos, GameEvent.Context.of(player, updatedState));
+                if (player != null) {
+                    context.getItemInHand().hurtAndBreak(1, player, context.getHand().asEquipmentSlot());
+                }
+            }
+
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    private static boolean playerHasBlockingItemUseIntent(final UseOnContext context) {
+        Player player = context.getPlayer();
+        return context.getHand().equals(InteractionHand.MAIN_HAND) && player.getOffhandItem().has(DataComponents.BLOCKS_ATTACKS) && !player.isSecondaryUseActive();
+    }
+
+    private Optional<BlockState> evaluateNewBlockState(final Level level, final BlockPos pos, final @org.jspecify.annotations.Nullable Player player, final BlockState oldState) {
+        Optional<BlockState> strippedBlock = this.getStripped(oldState);
+        if (strippedBlock.isPresent()) {
+            level.playSound(player, pos, SoundEvents.AXE_STRIP, SoundSource.BLOCKS, 1.0F, 1.0F);
+            return strippedBlock;
+        } else {
+            Optional<BlockState> scrapedBlock = WeatheringCopper.getPrevious(oldState);
+            if (scrapedBlock.isPresent()) {
+                spawnSoundAndParticle(level, pos, player, oldState, SoundEvents.AXE_SCRAPE, 3005);
+                return scrapedBlock;
             } else {
-                Optional<BlockState> optional3 = Optional.ofNullable((Block) ((BiMap) HoneycombItem.WAXED_TO_UNWAXED_BLOCKS.get()).get(state.getBlock())).map((block) -> block.getStateWithProperties(state));
-                if (optional3.isPresent()) {
-                    world.playSound(player, pos, SoundEvents.ITEM_AXE_WAX_OFF, SoundCategory.BLOCKS, 1.0F, 1.0F);
-                    world.syncWorldEvent(player, 3004, pos, 0);
-                    return optional3;
+                Optional<BlockState> waxoffBlock = Optional.ofNullable((Block) ((BiMap) HoneycombItem.WAX_OFF_BY_BLOCK.get()).get(oldState.getBlock())).map((b) -> b.withPropertiesOf(oldState));
+                if (waxoffBlock.isPresent()) {
+                    spawnSoundAndParticle(level, pos, player, oldState, SoundEvents.AXE_WAX_OFF, 3004);
+                    return waxoffBlock;
                 } else {
                     return Optional.empty();
                 }
@@ -141,11 +139,23 @@ public class PaxelItem extends MiningToolItem {
         }
     }
 
-    private Optional<BlockState> getStrippedState(BlockState state) {
-        return Optional.ofNullable(AxeItem.STRIPPED_BLOCKS.get(state.getBlock())).map((block) -> block.getDefaultState().with(PillarBlock.AXIS, state.get(PillarBlock.AXIS)));
+    private static void spawnSoundAndParticle(final Level level, final BlockPos pos, final @org.jspecify.annotations.Nullable Player player, final BlockState oldState, final SoundEvent soundEvent, final int particle) {
+        level.playSound(player, pos, soundEvent, SoundSource.BLOCKS, 1.0F, 1.0F);
+        level.levelEvent(player, particle, pos, 0);
+        if (oldState.getBlock() instanceof ChestBlock && oldState.getValue(ChestBlock.TYPE) != ChestType.SINGLE) {
+            BlockPos neighborPos = ChestBlock.getConnectedBlockPos(pos, oldState);
+            level.gameEvent(GameEvent.BLOCK_CHANGE, neighborPos, GameEvent.Context.of(player, level.getBlockState(neighborPos)));
+            level.levelEvent(player, particle, neighborPos, 0);
+        }
+
+    }
+
+    private Optional<BlockState> getStripped(final BlockState state) {
+        return Optional.ofNullable(STRIPPABLES.get(state.getBlock())).map((block) -> block.defaultBlockState().setValue(RotatedPillarBlock.AXIS, state.getValue(RotatedPillarBlock.AXIS)));
     }
 
     static {
-        PATH_STATES = ShovelItemAccessor.getPathStates();
+        STRIPPABLES = AxeItemAccessor.getStrippables();
+        FLATTENABLES = ShovelItemAccessor.getFlattenables();
     }
 }

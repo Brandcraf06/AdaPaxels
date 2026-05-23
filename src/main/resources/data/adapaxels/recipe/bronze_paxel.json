@@ -1,34 +1,25 @@
 {
   "type": "minecraft:crafting_shaped",
   "category": "equipment",
+  "key": {
+    "A": "techreborn:bronze_axe",
+    "B": "techreborn:bronze_pickaxe",
+    "C": "techreborn:bronze_shovel",
+    "S": "minecraft:stick"
+  },
   "pattern": [
     "ABC",
     " S ",
     " S "
   ],
-  "key": {
-    "A": {
-      "item": "indrev:bronze_axe"
-    },
-    "B": {
-      "item": "indrev:bronze_pickaxe"
-    },
-    "C": {
-      "item": "indrev:bronze_shovel"
-    },
-    "S": {
-      "item": "minecraft:stick"
-    }
-  },
   "result": {
-    "count": 1,
     "id": "adapaxels:bronze_paxel"
   },
   "fabric:load_conditions": [
     {
       "condition": "fabric:all_mods_loaded",
       "values": [
-        "indrev"
+        "techreborn"
       ]
     }
   ]
