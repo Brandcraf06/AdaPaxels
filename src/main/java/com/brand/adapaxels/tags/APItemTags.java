@@ -12,13 +12,7 @@ public class APItemTags {
     public static final TagKey<Item> ADAMANTIUM_TOOL_MATERIALS = register("adamantium_tool_materials");
     public static final TagKey<Item> NETHER_BRICK_TOOL_MATERIALS = register("nether_brick_tool_materials");
 
-    public static final TagKey<Item> TIN_TOOL_MATERIALS = register("tin_tool_materials");
-    public static final TagKey<Item> STEEL_TOOL_MATERIALS = register("steel_tool_materials");
-    public static final TagKey<Item> SILVER_TOOL_MATERIALS = register("silver_tool_materials");
-    public static final TagKey<Item> LEAD_TOOL_MATERIALS = register("lead_tool_materials");
     public static final TagKey<Item> BRONZE_TOOL_MATERIALS = register("bronze_tool_materials");
-
-
     public static final TagKey<Item> RUBY_TOOL_MATERIALS = register("ruby_tool_materials");
     public static final TagKey<Item> SAPPHIRE_TOOL_MATERIALS = register("sapphire_tool_materials");
     public static final TagKey<Item> PERIDOT_TOOL_MATERIALS = register("peridot_tool_materials");
