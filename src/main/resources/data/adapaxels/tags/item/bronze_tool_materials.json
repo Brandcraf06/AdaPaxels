@@ -1,7 +1,7 @@
 {
   "values": [
     {
-      "id": "techreborn:bronze_ingot",
+      "id": "#c:bronze_tool_materials",
       "required": false
     }
   ]
