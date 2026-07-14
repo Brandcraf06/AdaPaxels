@@ -72,9 +72,7 @@ publishMods {
 			start = startVersion
 			end = "${minecraft_version}"
 		}
-		requires {
-			slug = "fabric-api"
-		}
+		requires ("fabric-api")
 	}
 
 	curseforge {
@@ -85,8 +83,8 @@ publishMods {
 			start = startVersion
 			end = "${minecraft_version}"
 		}
-		requires {
-			slug = "fabric-api"
-		}
+		requires ("fabric-api")
+		client = true
+		server = true
 	}
 }
