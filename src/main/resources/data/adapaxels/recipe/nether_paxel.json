@@ -9,13 +9,13 @@
   ],
   "key": {
     "A": {
-      "item": "adabraniummod:nether_axe"
+      "item": "adabranium:nether_axe"
     },
     "B": {
-      "item": "adabraniummod:nether_pickaxe"
+      "item": "adabranium:nether_pickaxe"
     },
     "C": {
-      "item": "adabraniummod:nether_shovel"
+      "item": "adabranium:nether_shovel"
     },
     "S": {
       "item": "minecraft:stick"
@@ -29,7 +29,7 @@
     {
       "condition": "fabric:all_mods_loaded",
       "values": [
-        "adabraniummod"
+        "adabranium"
       ]
     }
   ]

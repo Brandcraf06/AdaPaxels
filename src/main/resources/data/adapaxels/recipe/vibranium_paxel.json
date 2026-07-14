@@ -8,16 +8,16 @@
   ],
   "key": {
     "A": {
-      "item": "adabraniummod:vibranium_axe"
+      "item": "adabranium:vibranium_axe"
     },
     "B": {
-      "item": "adabraniummod:vibranium_pickaxe"
+      "item": "adabranium:vibranium_pickaxe"
     },
     "C": {
-      "item": "adabraniummod:vibranium_shovel"
+      "item": "adabranium:vibranium_shovel"
     },
     "S": {
-      "item": "adabraniummod:obsidian_rod"
+      "item": "minecraft:stick"
     }
   },
   "result": {
@@ -28,7 +28,7 @@
     {
       "condition": "fabric:all_mods_loaded",
       "values": [
-        "adabraniummod"
+        "adabranium"
       ]
     }
   ]

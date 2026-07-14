@@ -19,38 +19,6 @@
       "required": false
     },
     {
-      "id": "adapaxels:tin_paxel",
-      "required": false
-    },
-    {
-      "id": "adapaxels:steel_paxel",
-      "required": false
-    },
-    {
-      "id": "adapaxels:silver_paxel",
-      "required": false
-    },
-    {
-      "id": "adapaxels:lead_paxel",
-      "required": false
-    },
-    {
-      "id": "adapaxels:copper_paxel",
-      "required": false
-    },
-    {
-      "id": "adapaxels:bronze_paxel",
-      "required": false
-    },
-    {
-      "id": "adapaxels:certus_quartz_paxel",
-      "required": false
-    },
-    {
-      "id": "adapaxels:nether_quartz_paxel",
-      "required": false
-    },
-    {
       "id": "adapaxels:tech_reborn_bronze_paxel",
       "required": false
     },
@@ -72,10 +40,6 @@
     },
     {
       "id": "adapaxels:dragon_paxel",
-      "required": false
-    },
-    {
-      "id": "adapaxels:gilded_netherite_paxel",
       "required": false
     },
     {
